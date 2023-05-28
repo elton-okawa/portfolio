@@ -1,0 +1,9 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Elton Okawa",
+  "license": "MIT",
+  "private": true,
+  "workspaces": ["packages/app"]
+}

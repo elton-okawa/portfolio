@@ -1,0 +1,42 @@
+# GraphQL Ecosystem
+
+Overview about GraphQL Ecosystem
+- Schema-first
+  - [Apollo Server](https://www.apollographql.com/docs/apollo-server/)
+  - [GraphQL Tools](https://the-guild.dev/graphql/tools)
+- Code-first -> good integration with Typescript
+  - [GraphQL Nexus](https://nexusjs.org/)
+  - [TypeGraphQL](https://typegraphql.com/)
+- Servers
+  - [Apollo Server](https://www.apollographql.com/docs/apollo-server/)
+  - [GraphQL Yoga](https://the-guild.dev/graphql/yoga-server)
+  - [GraphQL Http](https://www.npmjs.com/package/graphql-http)
+  - [NestJS](https://nestjs.com/)
+- Databases
+  - Postgres
+  - MongoDB
+  - FaunaDB
+  - Neo4j
+- ORM
+  - Sequelize
+  - Mongoose
+  - Objection.js
+  - Knex.js
+  - TypeORM
+- N+1 Problem
+  - [Data Loader](https://github.com/graphql/dataloader)
+  - [Join Monster](https://join-monster.readthedocs.io/en/latest/)
+- GraphQL Services
+  - AWS AppSync
+  - PostGraphile
+  - Hasura
+  - Prisma
+- Frontend
+  - Apollo Client
+  - Relay
+  - URQL
+  - graphql-react
+  - mst-gql
+- Codegen
+  - Apollo CLI
+  - GraphQL Code Generator
