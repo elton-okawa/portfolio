@@ -5,6 +5,6 @@ import { User } from "./user";
 export class UserResolver {
   @Query(returns => User)
   async user(@Arg("id") id: string) {
-    return { id, name: 'test' };
+    return { id, name: 'User from server!' };
   }
 }
