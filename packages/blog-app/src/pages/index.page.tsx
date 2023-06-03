@@ -2,18 +2,19 @@ import React from 'react';
 
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import styles from '@/styles/Home.module.css'
 import { withRelay, RelayProps } from 'relay-nextjs';
 import { graphql, usePreloadedQuery } from 'react-relay/hooks';
-import { getClientEnvironment } from '@/lib/client-environment';
+import { getClientEnvironment } from '@/lib/client';
+import { pages_HelloQuery } from './__generated__/pages_HelloQuery.graphql';
 
 const HelloQuery = graphql`
-  query Hello($name: String!) {
+  query pages_HelloQuery($name: String!) {
     hello(name: $name)
   }
 `;
 
-function Home({ preloadedQuery }: RelayProps<{}, HelloQuery>) {
+function Home({ preloadedQuery }: RelayProps<{}, pages_HelloQuery>) {
   const query = usePreloadedQuery(HelloQuery, preloadedQuery);
 
 
@@ -64,7 +65,7 @@ export default withRelay(Home, HelloQuery, {
     // The object returned from serverSideProps
     // { token }: { token: string }
   ) => {
-    const { createServerEnvironment } = await import('@/lib/server/server-environment');
+    const { createServerEnvironment } = await import('@/lib/server');
     return createServerEnvironment();
   },
 });

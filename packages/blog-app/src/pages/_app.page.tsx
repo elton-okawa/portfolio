@@ -2,7 +2,7 @@ import '../styles/globals.css'
 import type { AppProps } from 'next/app';
 import { RelayEnvironmentProvider } from 'react-relay/hooks';
 import { useRelayNextjs } from 'relay-nextjs/app';
-import { getClientEnvironment } from 'lib/client-environment';
+import { getClientEnvironment } from '@/lib/client';
 
 function App({ Component, pageProps }: AppProps) {
   const { env, ...relayProps } = useRelayNextjs(pageProps, {
