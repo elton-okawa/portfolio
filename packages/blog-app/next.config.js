@@ -1,10 +1,20 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  webpack: (config) => {
+  webpack: (config, { isServer, webpack }) => {
+    if (!isServer) {
+      // Ensures no server modules are included on the client.
+      config.plugins.push(
+        new webpack.IgnorePlugin({ resourceRegExp: /lib\/server/ })
+      );
+
+    }
+
     config.experiments = { ...config.experiments, topLevelAwait: true };
+
     return config;
   },
   transpilePackages: ['@elton-okawa/*'],
+  pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js'],
 };
 
-module.exports = nextConfig
+module.exports = nextConfig;
