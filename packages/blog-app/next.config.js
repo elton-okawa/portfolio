@@ -4,6 +4,7 @@ const nextConfig = {
     config.experiments = { ...config.experiments, topLevelAwait: true };
     return config;
   },
+  transpilePackages: ['@elton-okawa/*'],
 };
 
 module.exports = nextConfig
