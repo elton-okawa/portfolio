@@ -13,6 +13,9 @@ const nextConfig = {
 
     return config;
   },
+  compiler: {
+    relay: require('./relay.config'),
+  },
   transpilePackages: ['@elton-okawa/*'],
   pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js'],
 };

@@ -4,9 +4,9 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
 import { withRelay, RelayProps } from 'relay-nextjs';
-import { graphql, usePreloadedQuery } from 'react-relay/hooks';
+import { graphql, usePreloadedQuery } from 'react-relay';
 import { getClientEnvironment } from '@/lib/client';
-import { pages_HelloQuery } from './__generated__/pages_HelloQuery.graphql';
+import { pages_HelloQuery } from '@/lib/shared/__generated__/pages_HelloQuery.graphql';
 
 const HelloQuery = graphql`
   query pages_HelloQuery($name: String!) {
