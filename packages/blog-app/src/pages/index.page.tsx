@@ -57,7 +57,7 @@ export default withRelay(Home, HelloQuery, {
 
   //   return { token };
   // },
-
+  variablesFromContext: () => ({ name: 'from Server!'}),
   // Server-side props can be accessed as the second argument
   // to this function.
   createServerEnvironment: async (

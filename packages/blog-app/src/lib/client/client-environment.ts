@@ -1,5 +1,5 @@
 import { Environment, Network, Store, RecordSource } from 'relay-runtime';
-import { makeGraphQLRequest } from '../shared/makeGraphQLRequest';
+import { makeGraphQLRequest } from './makeGraphQLRequest';
 
 export function createClientNetwork() {
   return Network.create(makeGraphQLRequest);
