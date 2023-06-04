@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "relay": "mkdir -p src/lib/shared/__generated__ && relay-compiler"
+    "relay": "mkdir -p src/lib/shared/__generated__ && relay-compiler",
+    "analyze": "cross-env ANALYZE=true next build"
   },
   "dependencies": {
     "@elton-okawa/blog-api": "^0.0.0",
@@ -23,6 +24,7 @@
   "devDependencies": {
     "@babel/core": "^7.22.1",
     "@babel/plugin-proposal-decorators": "^7.22.3",
+    "@next/bundle-analyzer": "^13.4.4",
     "@types/node": "20.2.5",
     "@types/react": "18.2.8",
     "@types/react-dom": "18.2.4",
@@ -31,6 +33,7 @@
     "babel-plugin-relay": "^15.0.0",
     "babel-plugin-transform-typescript-metadata": "^0.3.2",
     "concurrently": "^8.0.1",
+    "cross-env": "^7.0.3",
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.4",
     "graphql": "^16.6.0",
