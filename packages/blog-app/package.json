@@ -11,7 +11,7 @@
     "analyze": "cross-env ANALYZE=true next build"
   },
   "dependencies": {
-    "@elton-okawa/blog-api": "^0.0.0",
+    "@elton-okawa/blog-api": "workspace:^0.0.0",
     "graphql": "^16.6.0",
     "graphql-yoga": "^3.9.1",
     "next": "13.4.4",
