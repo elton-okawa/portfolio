@@ -1,5 +1,5 @@
 {
-  "name": "@elton-okawa/blog-api",
+  "name": "@elton-okawa/graphql-schema",
   "version": "0.0.0",
   "main": "src/index.ts",
   "license": "MIT",

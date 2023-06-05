@@ -2,7 +2,7 @@ import { Environment, Network, Store, RecordSource, GraphQLResponse } from 'rela
 
 import { createYoga } from 'graphql-yoga'
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { schema } from '@elton-okawa/blog-api';
+import { schema } from '@elton-okawa/graphql-schema';
 
 const yoga = createYoga({
   schema,
