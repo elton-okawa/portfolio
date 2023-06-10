@@ -1,11 +1,15 @@
 import { createYoga } from 'graphql-yoga'
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { schema } from '@elton-okawa/graphql-schema';
+import { createDataloader, schema } from '@elton-okawa/graphql-schema';
+import { Context } from '@/lib/shared';
 
 export default createYoga<{
   req: NextApiRequest
   res: NextApiResponse
-}>({
+}, Context>({
   schema,
-  graphqlEndpoint: '/api/graphql'
+  graphqlEndpoint: '/api/graphql',
+  context: () => {
+    return { dataloader: createDataloader() }
+  }
 })
