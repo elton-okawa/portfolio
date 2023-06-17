@@ -5,5 +5,8 @@
   "author": "Elton Okawa",
   "license": "MIT",
   "private": true,
-  "workspaces": ["packages/*"]
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "dev": "pnpm --filter blog-app dev"
+  }
 }

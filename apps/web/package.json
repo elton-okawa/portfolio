@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "concurrently --names 'NEXTJS,RELAY' -c 'gray,yellow.dim' 'next dev' 'yarn relay --watch'",
+    "dev": "concurrently --names 'NEXTJS,RELAY' -c 'gray,yellow.dim' 'next dev' 'pnpm relay --watch'",
     "build": "yarn relay && next build",
     "start": "next start",
     "lint": "next lint",
