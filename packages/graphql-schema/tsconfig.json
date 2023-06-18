@@ -13,11 +13,13 @@
     "baseUrl": ".",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "skipLibCheck": true,
     "paths": {
       "@/*": ["./src/*"]
     }
   },
   "include": [
-    "src/**/*"
-  ]
+    "./src/**/*"
+  ],
+  "exclude": ["node_modules"]
 }

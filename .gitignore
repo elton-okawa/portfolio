@@ -3,3 +3,5 @@ yarn-error.log
 __generated__
 .vercel
 dist
+.turbo
+build
