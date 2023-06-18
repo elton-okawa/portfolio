@@ -9,11 +9,16 @@
   "engines": {
     "node": ">=16"
   },
+  "prettier": "@elton-okawa/prettier-config",
   "scripts": {
     "build": "tsc && tsc-alias",
-    "dev": "tsc && (concurrently \"tsc -w\" \"tsc-alias -w\")"
+    "dev": "tsc && (concurrently \"tsc -w\" \"tsc-alias -w\")",
+    "lint": "pnpm eslint --fix . ",
+    "format": "pnpm prettier --write ."
   },
   "devDependencies": {
+    "@elton-okawa/eslint-config-node": "workspace:^1.0.0",
+    "@elton-okawa/prettier-config": "workspace:^1.0.0",
     "concurrently": "^8.0.1",
     "graphql": "^16.6.0",
     "tsc-alias": "^1.8.6",
