@@ -6,7 +6,6 @@ const nextConfig = {
       config.plugins.push(
         new webpack.IgnorePlugin({ resourceRegExp: /lib\/server/ })
       );
-
     }
 
     config.experiments = { ...config.experiments, topLevelAwait: true };

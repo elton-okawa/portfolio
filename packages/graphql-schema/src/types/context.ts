@@ -1,5 +1,5 @@
-import { LazyDataloader } from "@/data";
+import { LazyDataloader } from '@/data';
 
 export type Context = {
-  dataloader: LazyDataloader
+  dataloader: LazyDataloader;
 };

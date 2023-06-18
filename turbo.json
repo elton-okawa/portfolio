@@ -8,6 +8,8 @@
     "deploy": {
       "dependsOn": ["build"]
     },
+    "lint": {},
+    "format": {},
     "dev": {
       "cache": false,
       "persistent": true
