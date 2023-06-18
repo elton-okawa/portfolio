@@ -1,12 +1,16 @@
-import { Environment, Network, Store, RecordSource, GraphQLResponse } from 'relay-runtime';
+import {
+  Environment,
+  Network,
+  Store,
+  RecordSource,
+} from 'relay-runtime';
 
-import { createYoga } from 'graphql-yoga'
-import type { NextApiRequest, NextApiResponse } from 'next'
+import { createYoga } from 'graphql-yoga';
 import { schema } from '@elton-okawa/graphql-schema';
 
 const yoga = createYoga({
   schema,
-  graphqlEndpoint: '/api/graphql'
+  graphqlEndpoint: '/api/graphql',
 });
 
 export function createServerNetwork() {
@@ -23,7 +27,7 @@ export function createServerNetwork() {
           query: params.text,
           variables,
         }),
-      },
+      }
       // Third parameter becomes your server context
       // ctx
     );

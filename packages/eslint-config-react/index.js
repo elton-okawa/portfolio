@@ -7,5 +7,8 @@ module.exports = {
     "prettier", // must be the last one
   ],
   parser: "@typescript-eslint/parser",
-  rules: {},
+  ignorePatterns: ["node_modules", "dist", "build", "*.gql", "*.graphql", ".turbo", ".next", ".vercel"],
+  rules: {
+    '@typescript-eslint/no-non-null-assertion': 'off',
+  },
 };

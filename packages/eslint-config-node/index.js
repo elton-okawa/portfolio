@@ -6,5 +6,7 @@ module.exports = {
   ],
   parser: "@typescript-eslint/parser",
   ignorePatterns: ["node_modules", "dist", "build"],
-  rules: {},
+  rules: {
+    '@typescript-eslint/no-non-null-assertion': 'off',
+  },
 };

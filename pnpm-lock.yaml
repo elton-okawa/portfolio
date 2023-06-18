@@ -9,7 +9,9 @@ importers:
     specifiers:
       '@babel/core': ^7.22.1
       '@babel/plugin-proposal-decorators': ^7.22.3
+      '@elton-okawa/eslint-config-react': workspace:^1.0.0
       '@elton-okawa/graphql-schema': workspace:^0.0.0
+      '@elton-okawa/prettier-config': workspace:^1.0.0
       '@next/bundle-analyzer': ^13.4.4
       '@types/node': 20.2.5
       '@types/react': 18.2.8
@@ -46,6 +48,8 @@ importers:
     devDependencies:
       '@babel/core': 7.22.1
       '@babel/plugin-proposal-decorators': 7.22.3_@babel+core@7.22.1
+      '@elton-okawa/eslint-config-react': link:../../packages/eslint-config-react
+      '@elton-okawa/prettier-config': link:../../packages/prettier-config
       '@next/bundle-analyzer': 13.4.4
       '@types/node': 20.2.5
       '@types/react': 18.2.8

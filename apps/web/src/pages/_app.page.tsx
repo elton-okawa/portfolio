@@ -1,4 +1,5 @@
-import '../styles/globals.css'
+import '../styles/globals.css';
+import React from 'react';
 import type { AppProps } from 'next/app';
 import { RelayEnvironmentProvider } from 'react-relay/hooks';
 import { useRelayNextjs } from 'relay-nextjs/app';

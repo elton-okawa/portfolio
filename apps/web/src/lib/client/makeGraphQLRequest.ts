@@ -1,4 +1,4 @@
-import { FetchFunction } from "relay-runtime";
+import { FetchFunction } from 'relay-runtime';
 
 export const makeGraphQLRequest: FetchFunction = async (params, variables) => {
   const response = await fetch('/api/graphql', {
@@ -15,4 +15,4 @@ export const makeGraphQLRequest: FetchFunction = async (params, variables) => {
 
   const json = await response.text();
   return JSON.parse(json);
-}
+};

@@ -1,0 +1,11 @@
+.next
+.vercel
+.turbo
+.vscode
+node_modules
+dist
+build
+__generated__
+*.gql
+*.graphql
+*.md
