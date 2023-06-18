@@ -57,12 +57,12 @@ export default withRelay(Home, HelloQuery, {
   variablesFromContext: () => ({ name: 'from Server!' }),
   // Server-side props can be accessed as the second argument
   // to this function.
-  createServerEnvironment: async (
+  createServerEnvironment: async () =>
     // ctx
     // The object returned from serverSideProps
     // { token }: { token: string }
-  ) => {
-    const { createServerEnvironment } = await import('@/lib/server');
-    return createServerEnvironment();
-  },
+    {
+      const { createServerEnvironment } = await import('@/lib/server');
+      return createServerEnvironment();
+    },
 });
