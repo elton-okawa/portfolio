@@ -1,4 +1,4 @@
-import { LazyDataloader } from "src/dataloader";
+import { LazyDataloader } from "@/data";
 
 export type Context = {
   dataloader: LazyDataloader

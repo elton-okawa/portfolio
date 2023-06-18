@@ -1,4 +1,4 @@
-import { Node } from "src/shared/node";
+import { Node } from "@/shared/node";
 import { LoadersConfig } from "./loaders-config";
 import DataLoader from "dataloader";
 

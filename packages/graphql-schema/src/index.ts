@@ -1,14 +1,16 @@
 import "reflect-metadata";
 
+export * from './types';
 import { buildSchema } from "type-graphql";
 import { UserResolver } from "./user";
 import { HelloResolver } from './hello';
 import { PostResolver } from "./posts";
-import { LazyDataloader } from "./dataloader/lazy-dataloader";
-import { LoadersConfig } from "./dataloader/loaders-config";
+import { LazyDataloader } from "./data/lazy-dataloader";
+import { LoadersConfig } from "./data/loaders-config";
 import { Post } from "./posts/post";
+import { GraphQLSchema } from "graphql";
 
-export const schema = await buildSchema({
+export const schema: GraphQLSchema = await buildSchema({
   resolvers: [UserResolver, HelloResolver, PostResolver],
   emitSchemaFile: process.env.NODE_ENV === 'development',
 });

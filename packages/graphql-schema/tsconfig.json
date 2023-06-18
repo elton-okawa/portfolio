@@ -8,10 +8,14 @@
     "noImplicitAny": true,
     "moduleResolution": "node",
     "sourceMap": true,
+    "declaration": true,
     "outDir": "dist",
     "baseUrl": ".",
     "emitDecoratorMetadata": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "include": [
     "src/**/*"

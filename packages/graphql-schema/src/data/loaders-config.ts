@@ -1,5 +1,5 @@
 import DataLoader from 'dataloader';
-import { Node } from 'src/shared/node';
+import { Node } from '@/shared/node';
 
 export class LoadersConfig {
   private loaders: Map<typeof Node, DataLoader.BatchLoadFn<string, Node>>;
