@@ -17,7 +17,6 @@ const HelloQuery = graphql`
 function Home({ preloadedQuery }: RelayProps<{}, pages_HelloQuery>) {
   const query = usePreloadedQuery(HelloQuery, preloadedQuery);
 
-
   return (
     <div className={styles.container}>
       <Head>
