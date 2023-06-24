@@ -1,5 +1,7 @@
 import { Arg, Query, Resolver } from 'type-graphql';
+import { Service } from 'typedi';
 
+@Service()
 @Resolver(String)
 export class HelloResolver {
   @Query(() => String)

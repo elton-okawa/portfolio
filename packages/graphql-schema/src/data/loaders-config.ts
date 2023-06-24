@@ -1,18 +1,21 @@
 import DataLoader from 'dataloader';
-import { Node } from '@/shared/node';
+import { NodeType } from '@/shared/node.type';
 
 export class LoadersConfig {
-  private loaders: Map<typeof Node, DataLoader.BatchLoadFn<string, Node>>;
+  private loaders: Map<
+    typeof NodeType,
+    DataLoader.BatchLoadFn<string, NodeType>
+  >;
 
   register(
     loaders: Array<
-      [type: typeof Node, loader: DataLoader.BatchLoadFn<string, Node>]
+      [type: typeof NodeType, loader: DataLoader.BatchLoadFn<string, NodeType>]
     >
   ) {
     this.loaders = new Map(loaders);
   }
 
-  create(type: typeof Node) {
+  create(type: typeof NodeType) {
     if (!this.loaders.has(type)) {
       throw new Error(`Loader type '${type}' not found`);
     }
