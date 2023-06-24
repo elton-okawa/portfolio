@@ -62,7 +62,9 @@ export default withRelay(Home, HelloQuery, {
     // The object returned from serverSideProps
     // { token }: { token: string }
     {
-      const { createServerEnvironment } = await import('@/lib/server');
+      const { createServerEnvironment } = await import(
+        '@/lib/server/server-environment'
+      );
       return createServerEnvironment();
     },
 });

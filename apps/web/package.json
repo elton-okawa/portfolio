@@ -13,21 +13,27 @@
     "analyze": "cross-env ANALYZE=true next build"
   },
   "dependencies": {
+    "@aws-sdk/credential-providers": "^3.359.0",
     "@elton-okawa/graphql-schema": "workspace:^0.0.0",
+    "@mongodb-js/zstd": "^1.1.0",
+    "aws4": "^1.12.0",
     "graphql": "^16.6.0",
     "graphql-yoga": "^3.9.1",
+    "kerberos": "^2.0.1",
+    "mongodb-client-encryption": "^2.8.0",
     "next": "13.4.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-relay": "^15.0.0",
     "relay-nextjs": "^2.0.1",
-    "relay-runtime": "^15.0.0"
+    "relay-runtime": "^15.0.0",
+    "snappy": "^7.2.2"
   },
   "devDependencies": {
-    "@elton-okawa/eslint-config-react": "workspace:^1.0.0",
-    "@elton-okawa/prettier-config": "workspace:^1.0.0",
     "@babel/core": "^7.22.1",
     "@babel/plugin-proposal-decorators": "^7.22.3",
+    "@elton-okawa/eslint-config-react": "workspace:^1.0.0",
+    "@elton-okawa/prettier-config": "workspace:^1.0.0",
     "@next/bundle-analyzer": "^13.4.4",
     "@types/node": "20.2.5",
     "@types/react": "18.2.8",

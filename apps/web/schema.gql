@@ -3,14 +3,14 @@
 # !!!   DO NOT MODIFY THIS FILE BY YOURSELF   !!!
 # -----------------------------------------------
 
-type Post {
+type PostType {
   id: ID!
   title: String!
 }
 
 type Query {
   hello(name: String!): String!
-  post(id: String!): Post!
+  post(id: String!): PostType!
   user(id: String!): User!
 }
 
