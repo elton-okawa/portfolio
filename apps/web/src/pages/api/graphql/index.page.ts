@@ -2,11 +2,12 @@ import { createYoga } from 'graphql-yoga';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { Context, schema, GraphQLApi } from '@elton-okawa/graphql-schema';
 
+const api = GraphQLApi.instance;
+
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const api = new GraphQLApi();
   await api.initialize();
 
   return createYoga<

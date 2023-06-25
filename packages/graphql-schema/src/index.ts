@@ -19,10 +19,36 @@ export const schema: GraphQLSchema = await buildSchema({
 
 export class GraphQLApi {
   private loadersConfig: LoadersConfig;
+  private initialized = false;
+  private static singleton: GraphQLApi;
+  private initLock: Promise<void>;
+
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  private constructor() {}
+
+  static get instance() {
+    if (!GraphQLApi.singleton) {
+      console.debug('Creating GraphQLApi instance');
+      return new GraphQLApi();
+    }
+
+    return GraphQLApi.singleton;
+  }
 
   async initialize() {
-    await this.configureDatabase();
-    this.configureDataloader();
+    if (!this.initialized && !this.initLock) {
+      this.initLock = new Promise((resolve, reject) => {
+        this.configureDatabase()
+          .then(() => {
+            this.configureDataloader();
+            this.initialized = true;
+            resolve();
+          })
+          .catch(reject);
+      });
+    }
+
+    await this.initLock;
   }
 
   createDataloader() {

@@ -8,9 +8,10 @@ const yoga = createYoga({
   graphqlEndpoint: '/api/graphql',
 });
 
+const api = GraphQLApi.instance;
+
 export function createServerNetwork() {
   return Network.create(async (params, variables) => {
-    const api = new GraphQLApi();
     await api.initialize();
 
     const response = await yoga.fetch(
