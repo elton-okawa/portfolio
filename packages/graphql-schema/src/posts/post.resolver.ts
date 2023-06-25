@@ -1,12 +1,14 @@
 import { Arg, Ctx, Query, Resolver } from 'type-graphql';
-import { Post } from './post';
+import { PostType } from './post.type';
 import { Context } from '../types';
+import { Service } from 'typedi';
 
-@Resolver(Post)
+@Service()
+@Resolver(PostType)
 export class PostResolver {
-  @Query(() => Post)
+  @Query(() => PostType)
   async post(@Arg('id') id: string, @Ctx() ctx: Context) {
-    const post = ctx.dataloader.get(Post).load(id);
+    const post = ctx.dataloader.get(PostType).load(id);
     if (!post) {
       throw new Error('Post not found');
     }

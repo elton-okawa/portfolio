@@ -1,15 +1,19 @@
 import { Environment, Network, Store, RecordSource } from 'relay-runtime';
 
 import { createYoga } from 'graphql-yoga';
-import { schema } from '@elton-okawa/graphql-schema';
+import { GraphQLApi, schema } from '@elton-okawa/graphql-schema';
 
 const yoga = createYoga({
   schema,
   graphqlEndpoint: '/api/graphql',
 });
 
+const api = GraphQLApi.instance;
+
 export function createServerNetwork() {
   return Network.create(async (params, variables) => {
+    await api.initialize();
+
     const response = await yoga.fetch(
       yoga.graphqlEndpoint,
       {
@@ -22,9 +26,8 @@ export function createServerNetwork() {
           query: params.text,
           variables,
         }),
-      }
-      // Third parameter becomes your server context
-      // ctx
+      },
+      { dataloader: api.createDataloader() }
     );
 
     return response.json();

@@ -1,5 +1,23 @@
 # Blog
 
+## Quick start
+
+### Requirements
+
+Copy `.env.base` as `.env` and change its values:
+
+```
+DB_NAME
+DB_URL
+```
+
+### Running
+
+```
+pnpm install
+turbo dev
+```
+
 ## Take a look
 
 - [Resources](./docs/resources.md) - links that helped me taking some decisions or getting started with some tools

@@ -1,8 +1,8 @@
-import { Node } from '../shared';
+import { NodeType } from '../shared';
 import { Field, ObjectType } from 'type-graphql';
 
 @ObjectType()
-export class Post extends Node {
+export class PostType extends NodeType {
   @Field()
   title!: string;
 }
