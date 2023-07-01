@@ -4,10 +4,13 @@ const colors = require('tailwindcss/colors');
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   plugins: [],
+  darkMode: 'class',
   theme: {
-    colors: {
-      primary: colors.indigo['500'],
-      secondary: colors.orange['400'],
+    extend: {
+      colors: {
+        primary: colors.indigo['500'],
+        secondary: colors.orange['400'],
+      },
     },
   },
 };
