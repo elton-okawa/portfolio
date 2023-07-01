@@ -17,14 +17,14 @@ function Home({ preloadedQuery }: RelayProps<object, pages_HelloQuery>) {
   const query = usePreloadedQuery(HelloQuery, preloadedQuery);
 
   return (
-    <div className="container xl mx-auto flex justify-center">
+    <div>
       <Head>
         <title>Elton's blog</title>
         <meta name="description" content="Elton's blog" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
+      <main className="container xl mx-auto flex justify-center flex-col">
         <NavBar />
         <h1>{query.hello}</h1>
       </main>
@@ -52,7 +52,6 @@ export default withRelay(Home, HelloQuery, {
   //       redirect: { destination: '/login', permanent: false },
   //     };
   //   }
-
   //   return { token };
   // },
   variablesFromContext: () => ({ name: 'from Server!' }),
