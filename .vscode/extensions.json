@@ -5,6 +5,7 @@
     "dbaeumer.vscode-eslint",
     "graphql.vscode-graphql",
     "esbenp.prettier-vscode",
-    "meta.relay"
+    "meta.relay",
+    "bradlc.vscode-tailwindcss"
   ]
 }
