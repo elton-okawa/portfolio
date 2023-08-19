@@ -36,7 +36,6 @@ const nextConfig = {
   compiler: {
     relay: require('./relay.config'),
   },
-  pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js'],
 };
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
