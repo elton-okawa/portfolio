@@ -24,9 +24,6 @@ const nextConfig = {
 
     return config;
   },
-  compiler: {
-    relay: require('./relay.config'),
-  },
 };
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
