@@ -24,7 +24,9 @@
     "react-dom": "^18.2.0",
     "react-relay": "^15.0.0",
     "relay-nextjs": "^2.0.1",
-    "relay-runtime": "^15.0.0"
+    "relay-runtime": "^15.0.0",
+    "@apollo/client": "3.8.0-rc.2",
+    "@apollo/experimental-nextjs-app-support": "^0.4.1"
   },
   "devDependencies": {
     "@babel/core": "^7.22.1",
