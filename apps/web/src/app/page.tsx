@@ -15,6 +15,8 @@ const query = gql`
   }
 `;
 
+export const dynamic = 'force-dynamic';
+
 export default async function Page() {
   const { data } = await getClient().query({ query });
 
