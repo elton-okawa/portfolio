@@ -1,5 +1,5 @@
 {
-  "cSpell.words": ["Nextjs", "typedi"],
+  "cSpell.words": ["Nextjs", "okawa", "typedi"],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
@@ -7,5 +7,6 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.quickSuggestions": {
     "strings": true
-  }
+  },
+  "editor.tabSize": 2
 }

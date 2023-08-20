@@ -1,6 +1,8 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation';
 import { ThemeButton } from './ThemeButton';
 
 export function NavBar() {
@@ -22,8 +24,8 @@ type NavLinkProps = {
 };
 
 function NavLink({ path, name }: NavLinkProps) {
-  const router = useRouter();
-  const active = router.pathname === path;
+  const pathname = usePathname();
+  const active = pathname === path;
 
   return (
     <Link

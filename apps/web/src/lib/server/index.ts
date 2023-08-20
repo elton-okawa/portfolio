@@ -1,1 +1,1 @@
-export * from './server-environment';
+export * from './apollo-ssr-client';

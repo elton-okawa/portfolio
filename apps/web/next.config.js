@@ -1,15 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  webpack: (config, { isServer, webpack }) => {
-    if (!isServer) {
-      // Ensures no server modules are included on the client.
-      config.plugins.push(
-        new webpack.IgnorePlugin({
-          resourceRegExp: /lib\/server/,
-        })
-      );
-    }
-
+  webpack: (config) => {
     config.experiments = { ...config.experiments, topLevelAwait: true };
     config.module = {
       ...config.module,
@@ -33,10 +24,6 @@ const nextConfig = {
 
     return config;
   },
-  compiler: {
-    relay: require('./relay.config'),
-  },
-  pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js'],
 };
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
