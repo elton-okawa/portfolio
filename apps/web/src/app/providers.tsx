@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { ThemeProvider } from 'next-themes';
-import { ApolloProvider } from '@/lib/ApolloProvider';
+import { ApolloProvider } from '@/lib/shared';
 
 type ProvidersProps = {
   children: React.ReactNode;

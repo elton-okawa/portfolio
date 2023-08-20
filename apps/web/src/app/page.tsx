@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import React from 'react';
 import { HelloText, NavBar } from '@/lib/shared';
-import { getClient } from '@/lib/apollo-client';
+import { getClient } from '@/lib/server';
 
 import { gql } from '@apollo/client';
 
