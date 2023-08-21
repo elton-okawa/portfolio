@@ -21,12 +21,14 @@ export default async function Page() {
   const { data } = await getClient().query({ query });
 
   return (
-    <main className="container xl mx-auto flex justify-center flex-col">
+    <main className="flex justify-center flex-col max-w-screen-lg mx-auto px-5">
       <NavBar />
-      <ArticleList />
+      <div className="mt-5">
+        <ArticleList />
 
-      <h1>{data.hello}</h1>
-      <HelloText />
+        <h1>{data.hello}</h1>
+        <HelloText />
+      </div>
     </main>
   );
 }
