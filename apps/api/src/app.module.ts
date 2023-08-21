@@ -8,19 +8,28 @@ import { YogaDriver, YogaDriverConfig } from '@graphql-yoga/nestjs';
 import { join } from 'path';
 import { HelloModule } from './hello/hello.module';
 import { DatabaseModule } from './database/database.module';
+import { PostsResolver } from './posts';
+import { DataloaderModule, DataloaderService } from './graphql-dataloader';
 
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
-    GraphQLModule.forRoot<YogaDriverConfig>({
+    GraphQLModule.forRootAsync<YogaDriverConfig>({
       driver: YogaDriver,
-      autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
-      sortSchema: true,
+      useFactory: (dataloaderService: DataloaderService) => ({
+        autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
+        sortSchema: true,
+        context: () => {
+          return { dataloader: dataloaderService.create() };
+        },
+      }),
+      imports: [DataloaderModule],
+      inject: [DataloaderService],
     }),
     HelloModule,
     DatabaseModule,
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, PostsResolver],
 })
 export class AppModule {}
