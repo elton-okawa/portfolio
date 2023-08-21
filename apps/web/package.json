@@ -4,9 +4,9 @@
   "private": true,
   "prettier": "@elton-okawa/prettier-config",
   "scripts": {
-    "dev": "concurrently --names 'NEXTJS' -c 'gray,yellow.dim' 'next dev'",
     "build": "next build",
     "start": "next start",
+    "start:dev": "next dev",
     "lint": "next lint",
     "format": "pnpm prettier --write .",
     "analyze": "cross-env ANALYZE=true next build"
