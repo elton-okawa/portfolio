@@ -31,7 +31,7 @@ export function ThemeButton() {
   return (
     <button
       onClick={toggleMode}
-      className="w-10 h-10 p-2.5 rounded-full shadow-[0_0_4px_1px_rgba(0,0,0,0.1)] dark:bg-gray-600"
+      className="w-10 h-10 p-2.5 rounded-full shadow-[0_0_4px_1px_rgba(0,0,0,0.1)] bg-default"
     >
       {mounted ? <Icon /> : null}
     </button>
