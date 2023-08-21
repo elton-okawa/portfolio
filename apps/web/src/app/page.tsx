@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import React from 'react';
-import { HelloText, NavBar } from '@/lib/shared';
+import { HelloText, NavBar, ArticleList } from '@/lib/shared';
 import { getClient } from '@/lib/server';
 
 import { gql } from '@apollo/client';
@@ -21,10 +21,14 @@ export default async function Page() {
   const { data } = await getClient().query({ query });
 
   return (
-    <main className="container xl mx-auto flex justify-center flex-col">
+    <main className="flex justify-center flex-col max-w-screen-lg mx-auto px-5">
       <NavBar />
-      <h1>{data.hello}</h1>
-      <HelloText />
+      <div className="mt-5">
+        <ArticleList />
+
+        <h1>{data.hello}</h1>
+        <HelloText />
+      </div>
     </main>
   );
 }

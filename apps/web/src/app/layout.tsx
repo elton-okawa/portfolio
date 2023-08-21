@@ -21,7 +21,7 @@ export default function RootLayout({
     // and not deeply into DOM tree
     // https://react.dev/reference/react-dom/hydrate#suppressing-unavoidable-hydration-mismatch-errors
     <html suppressHydrationWarning>
-      <body>
+      <body className="bg-gray-50 dark:bg-gray-700">
         <Providers>{children}</Providers>
       </body>
     </html>

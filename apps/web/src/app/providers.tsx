@@ -10,7 +10,7 @@ type ProvidersProps = {
 
 export function Providers({ children }: ProvidersProps) {
   return (
-    <ThemeProvider>
+    <ThemeProvider attribute="class">
       <ApolloProvider>{children}</ApolloProvider>
     </ThemeProvider>
   );
