@@ -4,14 +4,18 @@
   "private": true,
   "prettier": "@elton-okawa/prettier-config",
   "scripts": {
-    "build": "next build",
+    "build": "pnpm compile:schema && next build",
     "start": "next start",
-    "start:dev": "next dev",
+    "start:dev": "concurrently -n NEXT,SCHEMA 'next dev' 'sleep 5 && pnpm watch:schema'",
     "lint": "next lint",
     "format": "pnpm prettier --write .",
-    "analyze": "cross-env ANALYZE=true next build"
+    "analyze": "cross-env ANALYZE=true next build",
+    "compile:schema": "graphql-codegen -r dotenv/config",
+    "watch:schema": "graphql-codegen -r dotenv/config -w"
   },
   "dependencies": {
+    "@apollo/client": "3.8.0-rc.2",
+    "@apollo/experimental-nextjs-app-support": "^0.4.1",
     "@ark-ui/react": "^0.7.0",
     "@heroicons/react": "^2.0.18",
     "graphql": "^16.6.0",
@@ -19,16 +23,18 @@
     "next": "13.4.19",
     "next-themes": "^0.2.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "@apollo/client": "3.8.0-rc.2",
-    "@apollo/experimental-nextjs-app-support": "^0.4.1"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.22.1",
     "@babel/plugin-proposal-decorators": "^7.22.3",
     "@elton-okawa/eslint-config-react": "workspace:^1.0.0",
     "@elton-okawa/prettier-config": "workspace:^1.0.0",
+    "@graphql-codegen/cli": "^5.0.0",
+    "@graphql-codegen/client-preset": "^4.1.0",
+    "@graphql-typed-document-node/core": "^3.2.0",
     "@next/bundle-analyzer": "^13.4.4",
+    "@parcel/watcher": "^2.2.0",
     "@types/node": "20.2.5",
     "@types/react": "18.2.8",
     "@types/react-dom": "18.2.4",

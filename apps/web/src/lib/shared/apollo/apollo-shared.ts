@@ -1,13 +1,13 @@
 import { HttpLink } from '@apollo/client';
 
 export function makeHttpLink() {
-  const url = getUrl();
+  const url = getGraphQLUrl();
 
   return new HttpLink({
     uri: `${url}/graphql`,
   });
 }
 
-function getUrl() {
+export function getGraphQLUrl() {
   return process.env.NEXT_GRAPHQL_URL;
 }
