@@ -18,9 +18,7 @@ import { PostsModule } from './posts/posts.module';
     GraphQLModule.forRootAsync<YogaDriverConfig>({
       driver: YogaDriver,
       useFactory: (dataloaderService: DataloaderService) => ({
-        autoSchemaFile:
-          process.env.NODE_ENV === 'local' &&
-          join(process.cwd(), 'src/schema.gql'),
+        autoSchemaFile: true,
         sortSchema: true,
         context: () => {
           return { dataloader: dataloaderService.create() };
