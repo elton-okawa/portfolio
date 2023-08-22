@@ -10,8 +10,11 @@ export const metadata: Metadata = {
 };
 
 const query = gql`
-  query Hello {
-    hello(name: "world!")
+  query Posts {
+    posts {
+      id
+      title
+    }
   }
 `;
 
@@ -26,7 +29,9 @@ export default async function Page() {
       <div className="mt-5">
         <ArticleList />
 
-        <h1>{data.hello}</h1>
+        {data.posts.map((post) => (
+          <p key={post.id}>{post.title}</p>
+        ))}
         <HelloText />
       </div>
     </main>
