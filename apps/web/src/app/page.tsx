@@ -29,7 +29,7 @@ export default async function Page() {
       <div className="mt-5">
         <ArticleList />
 
-        {data.posts.map((post) => (
+        {data.posts.map((post: any) => (
           <p key={post.id}>{post.title}</p>
         ))}
         <HelloText />
