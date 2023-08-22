@@ -10,6 +10,7 @@ import { HelloModule } from './hello/hello.module';
 import { DatabaseModule } from './database/database.module';
 import { PostsResolver } from './posts';
 import { DataloaderModule, DataloaderService } from './graphql-dataloader';
+import { PostsModule } from './posts/posts.module';
 
 @Module({
   imports: [
@@ -28,6 +29,7 @@ import { DataloaderModule, DataloaderService } from './graphql-dataloader';
     }),
     HelloModule,
     DatabaseModule,
+    PostsModule,
   ],
   controllers: [AppController],
   providers: [AppService, PostsResolver],

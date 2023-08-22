@@ -1,4 +1,4 @@
-import { NodeType } from '../../shared';
+import { NodeType } from '../shared';
 import { Field, ObjectType } from '@nestjs/graphql';
 
 @ObjectType()

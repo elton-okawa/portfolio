@@ -1,5 +1,5 @@
 import { Resolver, Args, Query, Context } from '@nestjs/graphql';
-import { PostType } from './models/post.type';
+import { PostType } from './post.type';
 import { GraphQLContext } from '@/shared';
 
 @Resolver(() => PostType)

@@ -1,4 +1,4 @@
-import DataLoader from 'dataloader';
+import * as DataLoader from 'dataloader';
 import { NodeType } from '@/shared';
 
 export class LoadersConfig {
