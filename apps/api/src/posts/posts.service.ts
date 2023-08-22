@@ -20,4 +20,9 @@ export class PostsService {
 
     return plainToInstance(Post, postsData);
   }
+
+  async list(): Promise<Post[]> {
+    const posts = await this.posts.find().toArray();
+    return plainToInstance(Post, posts);
+  }
 }

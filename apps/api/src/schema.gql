@@ -10,4 +10,5 @@ type PostType {
 type Query {
   hello(name: String!): String!
   post(id: String!): PostType!
+  posts: [PostType!]!
 }
