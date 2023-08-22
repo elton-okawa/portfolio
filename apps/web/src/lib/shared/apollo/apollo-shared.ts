@@ -9,5 +9,5 @@ export function makeHttpLink() {
 }
 
 function getUrl() {
-  return process.env.PUBLIC_URL;
+  return process.env.NEXT_GRAPHQL_URL;
 }
