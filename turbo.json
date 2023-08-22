@@ -10,7 +10,7 @@
     },
     "lint": {},
     "format": {},
-    "dev": {
+    "start:dev": {
       "cache": false,
       "persistent": true
     }

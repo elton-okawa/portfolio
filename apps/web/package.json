@@ -4,16 +4,15 @@
   "private": true,
   "prettier": "@elton-okawa/prettier-config",
   "scripts": {
-    "dev": "concurrently --names 'NEXTJS' -c 'gray,yellow.dim' 'next dev'",
     "build": "next build",
     "start": "next start",
+    "start:dev": "next dev",
     "lint": "next lint",
     "format": "pnpm prettier --write .",
     "analyze": "cross-env ANALYZE=true next build"
   },
   "dependencies": {
     "@ark-ui/react": "^0.7.0",
-    "@elton-okawa/graphql-schema": "workspace:^0.0.0",
     "@heroicons/react": "^2.0.18",
     "graphql": "^16.6.0",
     "graphql-yoga": "^3.9.1",

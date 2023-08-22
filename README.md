@@ -4,18 +4,30 @@
 
 ### Requirements
 
-Copy `.env.base` as `.env` and change its values:
+Setup `api` environment files by copying `.env.base` as `.env`:
 
 ```
-DB_NAME
-DB_URL
+cd apps/api
+cp .env.base .env
+```
+
+You must update the following values:
+
+- `DB_NAME`
+- `DB_URL`
+
+Setup `app` environment files following the same idea:
+
+```
+cd apps/app
+cp .env.base .env
 ```
 
 ### Running
 
 ```
 pnpm install
-turbo dev
+turbo start:dev
 ```
 
 ## Take a look
