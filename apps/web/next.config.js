@@ -5,6 +5,13 @@ const nextConfig = {
 
     return config;
   },
+  modularizeImports: {
+    components: {
+      transform: 'components/{{member}}',
+      skipDefaultConversion: true,
+      preventFullImport: true,
+    },
+  },
 };
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires

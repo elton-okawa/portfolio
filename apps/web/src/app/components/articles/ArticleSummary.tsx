@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Image from 'next/image';
-import { Typography } from '@/lib/shared';
+import { Typography } from '@/components';
 
 type ArticleSummaryProps = {
   title: string;

@@ -1,5 +1,5 @@
 import { useCallback, useState } from 'react';
-import { IS_CLIENT } from '../constants';
+import { IS_CLIENT } from '../constants/environment';
 
 type ValueOrFunction = string | ((state: string) => string);
 type Return = [string, (value: ValueOrFunction) => void];

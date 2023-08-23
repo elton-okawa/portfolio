@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import '../styles/globals.css';
 
-import { Providers } from './providers';
+import { Providers } from './components';
 
 export const metadata: Metadata = {
   title: 'Home',

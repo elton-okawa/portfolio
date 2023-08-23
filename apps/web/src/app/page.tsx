@@ -1,9 +1,9 @@
 import { Metadata } from 'next';
 import React from 'react';
-import { HelloText, NavBar, ArticleList } from '@/lib/shared';
-import { getClient } from '@/lib/server';
+import { NavBar, ArticleList } from './components';
+import { getClient } from '@/lib/apollo/apollo-ssr-client';
 
-import { gql } from '../__generated__/gql';
+import { gql } from '@/__generated__/gql';
 
 export const metadata: Metadata = {
   title: "Elton's blog",
@@ -32,7 +32,6 @@ export default async function Page() {
         {data.posts.map((post) => (
           <p key={post.id}>{post.title}</p>
         ))}
-        <HelloText />
       </div>
     </main>
   );
