@@ -13,7 +13,14 @@ const query = gql(/* GraphQL */ `
 `);
 
 export async function ArticleList() {
-  const { data } = await getClient().query({ query });
+  const { data } = await getClient().query({
+    query,
+    context: {
+      fetchOptions: {
+        next: { revalidate: 1 },
+      },
+    },
+  });
 
   return (
     <div className="flex flex-col gap-2">
