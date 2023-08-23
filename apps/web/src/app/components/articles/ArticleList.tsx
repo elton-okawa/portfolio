@@ -17,7 +17,7 @@ export async function ArticleList() {
     query,
     context: {
       fetchOptions: {
-        next: { revalidate: 1 },
+        next: { revalidate: 3600 },
       },
     },
   });
