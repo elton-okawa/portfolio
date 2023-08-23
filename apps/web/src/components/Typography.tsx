@@ -1,6 +1,6 @@
 import React from 'react';
 
-type TypographyComponent = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'body';
+type TypographyComponent = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p';
 
 type TypographyVariant = 'text' | 'description';
 
@@ -10,14 +10,14 @@ type TypographyProps = React.PropsWithChildren<{
   className?: string;
 }>;
 
-const htmlComponentMapping: Record<TypographyComponent, React.ElementType> = {
-  h1: 'h1',
-  h2: 'h2',
-  h3: 'h3',
-  h4: 'h4',
-  h5: 'h5',
-  h6: 'h6',
-  body: 'p',
+const componentToClasses: Record<TypographyComponent, string> = {
+  h1: 'text-4xl',
+  h2: 'text-3xl',
+  h3: 'text-2xl',
+  h4: 'text-xl',
+  h5: 'text-lg',
+  h6: 'text-base',
+  p: 'text-base',
 };
 
 const variantToColor: Record<TypographyVariant, string> = {
@@ -26,13 +26,18 @@ const variantToColor: Record<TypographyVariant, string> = {
 };
 
 export function Typography({
-  component = 'body',
+  component = 'p',
   variant = 'text',
   children,
   className = '',
 }: TypographyProps) {
-  const Component = htmlComponentMapping[component];
+  const Component = component;
+  const classes = componentToClasses[component];
   const color = variantToColor[variant];
 
-  return <Component className={`${color} ${className}`}>{children}</Component>;
+  return (
+    <Component className={`${classes} ${color} ${className}`}>
+      {children}
+    </Component>
+  );
 }
