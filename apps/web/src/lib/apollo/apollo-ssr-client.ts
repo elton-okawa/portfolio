@@ -3,7 +3,7 @@ import {
   NextSSRApolloClient,
 } from '@apollo/experimental-nextjs-app-support/ssr';
 import { registerApolloClient } from '@apollo/experimental-nextjs-app-support/rsc';
-import { makeHttpLink } from '@/lib/shared';
+import { makeHttpLink } from './apollo-shared';
 
 export const { getClient } = registerApolloClient(() => {
   return new NextSSRApolloClient({

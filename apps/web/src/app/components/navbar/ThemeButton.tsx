@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { SunIcon, MoonIcon } from '@heroicons/react/24/outline';
-import { useMounted } from './hooks';
+import { useMounted } from '@/lib/hooks';
 import { useTheme } from 'next-themes';
 
 enum Theme {

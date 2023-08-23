@@ -5,7 +5,7 @@ import {
   SSRMultipartLink,
 } from '@apollo/experimental-nextjs-app-support/ssr';
 import { makeHttpLink } from './apollo-shared';
-import { IS_CLIENT } from '@/lib/shared/constants';
+import { IS_CLIENT } from '@/lib/constants';
 
 export function makeClient() {
   const httpLink = makeHttpLink();

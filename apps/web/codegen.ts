@@ -1,5 +1,5 @@
 import { CodegenConfig } from '@graphql-codegen/cli';
-import { getGraphQLUrl } from './src/lib/shared/apollo/apollo-shared';
+import { getGraphQLUrl } from './src/lib/apollo/apollo-shared';
 
 const config: CodegenConfig = {
   schema: `${getGraphQLUrl()}/graphql`,
