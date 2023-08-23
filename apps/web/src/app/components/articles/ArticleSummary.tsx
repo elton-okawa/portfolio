@@ -1,9 +1,11 @@
 import React from 'react';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { Typography } from '@/components';
 
 type ArticleSummaryProps = {
+  id: string;
   title: string;
   description: string;
   photoUrl: string;
@@ -21,7 +23,9 @@ export function ArticleSummary(props: ArticleSummaryProps) {
         />
       </div>
       <div className="p-5">
-        <p className="font-semibold">{props.title}</p>
+        <Link className="font-semibold" href={`/articles/${props.id}`}>
+          {props.title}
+        </Link>
         <Typography variant="description">{props.description}</Typography>
       </div>
     </div>
