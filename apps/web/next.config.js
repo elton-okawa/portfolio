@@ -6,10 +6,11 @@ const nextConfig = {
     return config;
   },
   modularizeImports: {
+    // Destructure barrel imports - View 010-nextjs-file-structure
     components: {
       transform: 'components/{{member}}',
-      skipDefaultConversion: true,
-      preventFullImport: true,
+      skipDefaultConversion: true, // keep named imports
+      preventFullImport: true, // error if you do "import * as something"
     },
   },
 };
