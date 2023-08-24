@@ -1,10 +1,9 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import { ThemeButton } from './ThemeButton';
 import { Logo } from './Logo';
+import { NavLink } from './NavLink';
 
 export function NavBar() {
   return (
@@ -20,27 +19,5 @@ export function NavBar() {
         <ThemeButton />
       </div>
     </div>
-  );
-}
-
-type NavLinkProps = {
-  path: string;
-  name: string;
-};
-
-function NavLink({ path, name }: NavLinkProps) {
-  const pathname = usePathname();
-  // Home path '/' is included in all pathnames
-  const active = path === '/' ? pathname === path : pathname.startsWith(path);
-
-  return (
-    <Link
-      href={path}
-      className={`p-2 hover:text-secondary ${
-        active && 'text-primary border-primary border-b-2'
-      }`}
-    >
-      {name}
-    </Link>
   );
 }
