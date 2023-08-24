@@ -5,7 +5,7 @@ import { Typography } from '@/components';
 export function Footer() {
   return (
     <footer className="flex justify-between p-5 bg-blue-50">
-      <div className="flex flex-col">
+      <div className="flex flex-col items-start">
         <Logo />
         <Typography variant="description">2022-present Elton Okawa</Typography>
       </div>
