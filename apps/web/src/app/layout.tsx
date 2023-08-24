@@ -23,8 +23,8 @@ export default function RootLayout({
     <html suppressHydrationWarning>
       <body className="bg-gray-50 dark:bg-gray-700">
         <Providers>
-          <main className="flex justify-center flex-col max-w-screen-md mx-auto px-5 gap-2">
-            <NavBar />
+          <NavBar />
+          <main className="flex justify-center flex-col max-w-screen-md mx-auto mt-16 px-5 gap-2">
             {children}
           </main>
         </Providers>
