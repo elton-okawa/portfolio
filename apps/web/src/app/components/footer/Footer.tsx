@@ -1,6 +1,5 @@
 import React from 'react';
-import { Logo } from '../navbar/Logo';
-import { Typography } from '@/components';
+import { Typography, Logo } from '@/components';
 
 export function Footer() {
   return (

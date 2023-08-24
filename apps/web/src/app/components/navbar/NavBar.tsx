@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { ThemeButton } from './ThemeButton';
-import { Logo } from './Logo';
+import { Logo } from '@/components';
 import { NavLink } from './NavLink';
 
 export function NavBar() {
