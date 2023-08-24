@@ -21,7 +21,7 @@ export default function RootLayout({
     // and not deeply into DOM tree
     // https://react.dev/reference/react-dom/hydrate#suppressing-unavoidable-hydration-mismatch-errors
     <html suppressHydrationWarning>
-      <body className="flex flex-col bg-gray-50 dark:bg-gray-700">
+      <body className="flex flex-col gap-5 bg-gray-50 dark:bg-gray-700">
         <Providers>
           <NavBar />
           <main className="flex justify-start flex-col flex-1 max-w-screen-md mx-auto mt-16 px-5 gap-2">
