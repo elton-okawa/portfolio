@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Typography } from '@/components';
 
 type ArticleSummaryProps = {
-  id: string;
+  slug: string;
   title: string;
   description: string;
   photoUrl: string;
@@ -23,7 +23,7 @@ export function ArticleSummary(props: ArticleSummaryProps) {
         />
       </div>
       <div className="p-5">
-        <Link className="font-semibold" href={`/articles/${props.id}`}>
+        <Link className="font-semibold" href={`/articles/${props.slug}`}>
           {props.title}
         </Link>
         <Typography variant="description">{props.description}</Typography>
