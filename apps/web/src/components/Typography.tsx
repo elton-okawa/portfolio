@@ -12,13 +12,13 @@ type TypographyProps = React.PropsWithChildren<{
 }>;
 
 const componentToClasses: Record<TypographyComponent, string> = {
-  h1: 'text-4xl',
-  h2: 'text-3xl',
-  h3: 'text-2xl',
-  h4: 'text-xl',
-  h5: 'text-lg',
-  h6: 'text-base',
-  p: 'text-base',
+  h1: 'text-4xl mt-5 mb-1',
+  h2: 'text-3xl mt-5 mb-1',
+  h3: 'text-2xl mt-5 mb-1',
+  h4: 'text-xl mt-5 mb-1',
+  h5: 'text-lg mt-5 mb-1',
+  h6: 'text-base mt-5 mb-1',
+  p: 'text-base mb-3',
 };
 
 const variantToColor: Record<TypographyVariant, string> = {
