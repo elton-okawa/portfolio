@@ -8,6 +8,7 @@ type TypographyProps = React.PropsWithChildren<{
   component?: TypographyComponent;
   variant?: TypographyVariant;
   className?: string;
+  anchor?: boolean;
 }>;
 
 const componentToClasses: Record<TypographyComponent, string> = {

@@ -1,4 +1,7 @@
+import React from 'react';
+import { Typography } from '@/components';
 import type { MDXComponents } from 'mdx/types';
+import { SectionAnchor } from '@/components/SectionAnchor';
 
 // This file allows you to provide custom React components
 // to be used in MDX files. You can import and use any
@@ -10,6 +13,22 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     // Allows customizing built-in components, e.g. to add styling.
     // h1: ({ children }) => <h1 style={{ fontSize: "100px" }}>{children}</h1>,
+    h1: ({ children }) => (
+      <Typography component="h1" anchor>
+        {children}
+      </Typography>
+    ),
+    h2: ({ children }) => (
+      <Typography component="h2" anchor>
+        {children}
+      </Typography>
+    ),
+    h3: ({ children }) => (
+      <Typography component="h3" anchor>
+        {children}
+      </Typography>
+    ),
+    SectionAnchor,
     ...components,
   };
 }
