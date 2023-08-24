@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import '../styles/globals.css';
 
-import { Providers } from './components';
+import { Providers, NavBar } from './components';
 
 export const metadata: Metadata = {
   title: 'Home',
@@ -22,7 +22,12 @@ export default function RootLayout({
     // https://react.dev/reference/react-dom/hydrate#suppressing-unavoidable-hydration-mismatch-errors
     <html suppressHydrationWarning>
       <body className="bg-gray-50 dark:bg-gray-700">
-        <Providers>{children}</Providers>
+        <Providers>
+          <main className="flex justify-center flex-col max-w-screen-md mx-auto px-5 gap-2">
+            <NavBar />
+            {children}
+          </main>
+        </Providers>
       </body>
     </html>
   );

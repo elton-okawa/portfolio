@@ -25,7 +25,8 @@ type NavLinkProps = {
 
 function NavLink({ path, name }: NavLinkProps) {
   const pathname = usePathname();
-  const active = pathname === path;
+  // Home path '/' is included in all pathnames
+  const active = path === '/' ? pathname === path : pathname.startsWith(path);
 
   return (
     <Link

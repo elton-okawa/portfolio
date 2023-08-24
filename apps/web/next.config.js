@@ -5,6 +5,9 @@ const nextConfig = {
 
     return config;
   },
+  experimental: {
+    mdxRs: true,
+  },
   modularizeImports: {
     // Destructure barrel imports - View 010-nextjs-file-structure
     components: {
@@ -19,4 +22,7 @@ const nextConfig = {
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
-module.exports = withBundleAnalyzer(nextConfig);
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const withMDX = require('@next/mdx')();
+
+module.exports = withBundleAnalyzer(withMDX(nextConfig));

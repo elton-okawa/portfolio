@@ -6,6 +6,7 @@
     "graphql.vscode-graphql",
     "esbenp.prettier-vscode",
     "meta.relay",
-    "bradlc.vscode-tailwindcss"
+    "bradlc.vscode-tailwindcss",
+    "unifiedjs.vscode-mdx"
   ]
 }

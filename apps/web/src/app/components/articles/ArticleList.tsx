@@ -29,6 +29,7 @@ export async function ArticleList() {
           key={post.id}
           {...post}
           // TODO add on api
+          slug="placeholder"
           photoUrl="/placeholder.jpg"
           description="placeholder description"
         />
