@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         primary: colors.indigo['500'],
         secondary: colors.orange['400'],
+        accent: colors.teal['600'],
       },
       keyframes: ({ theme }) => ({
         typing: {
