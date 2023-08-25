@@ -2,12 +2,12 @@
 
 import React from 'react';
 import { ThemeButton } from './ThemeButton';
-import { Logo } from './Logo';
+import { Logo } from '@/components';
 import { NavLink } from './NavLink';
 
 export function NavBar() {
   return (
-    <header className="py-2 fixed top-0 w-full bg-gray-50 dark:bg-gray-700 shadow-sm">
+    <header className="py-2 fixed top-0 w-full bg-indigo-50 dark:bg-gray-700 shadow-sm">
       <div className="flex items-center justify-between max-w-screen-md mx-auto">
         <div className="w-32 flex align-center">
           <Logo />
