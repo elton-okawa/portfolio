@@ -5,7 +5,7 @@ function sleep(ms: number) {
 }
 
 export default async function Page() {
-  await sleep(60000);
+  await sleep(process.env.NODE_ENV === 'development' ? 60000 : 1000);
 
   return <p>Page to test load!</p>;
 }
