@@ -2,10 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  height: 100%;
-  margin: 0;
+@layer base {
+  html,
+  body {
+    @apply h-full m-0;
+  }
+
+  h1 {
+    @apply text-4xl mt-5 mb-1;
+  }
+  h2 {
+    @apply text-3xl mt-5 mb-1;
+  }
+  h3 {
+    @apply text-2xl mt-5 mb-1;
+  }
+  h4 {
+    @apply text-xl mt-5 mb-1;
+  }
+  h5 {
+    @apply text-lg mt-5 mb-1;
+  }
+  h6 {
+    @apply text-base mt-5 mb-1;
+  }
+  p {
+    @apply text-base mb-3;
+  }
 }
 
 @layer components {
@@ -15,5 +38,13 @@ body {
 
   .border-default {
     @apply border-gray-100 dark:border-gray-500;
+  }
+
+  .text-default {
+    @apply text-black dark:text-white;
+  }
+
+  .text-description {
+    @apply text-slate-500 dark:text-slate-400;
   }
 }
