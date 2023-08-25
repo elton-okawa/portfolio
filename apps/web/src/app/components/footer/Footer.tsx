@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Logo } from '@/components';
+import { Logo } from '@/components';
 
 export function Footer() {
   return (
@@ -7,9 +7,7 @@ export function Footer() {
       <div className="flex justify-between max-w-screen-md py-5 mx-auto">
         <div className="flex flex-col items-start">
           <Logo />
-          <Typography variant="description">
-            2022-present Elton Okawa
-          </Typography>
+          <p className="text-description">2022-present Elton Okawa</p>
         </div>
         {/* TODO add links */}
         <div />
