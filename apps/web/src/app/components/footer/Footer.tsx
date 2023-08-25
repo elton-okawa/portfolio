@@ -3,7 +3,7 @@ import { Logo } from '@/components';
 
 export function Footer() {
   return (
-    <footer className="bg-indigo-50 dark:bg-gray-800">
+    <footer className="bg-gradient-to-r from-transparent via-indigo-50 dark:via-gray-800">
       <div className="flex justify-between max-w-screen-md py-5 mx-auto">
         <div className="flex flex-col items-start">
           <Logo />

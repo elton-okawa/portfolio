@@ -3,8 +3,7 @@ import React from 'react';
 export function Loading() {
   return (
     <svg
-      width="24"
-      height="24"
+      width="100%"
       viewBox="0 0 24 24"
       fill="currentcolor"
       className="animate-spin"
