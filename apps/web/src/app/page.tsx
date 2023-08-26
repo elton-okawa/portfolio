@@ -1,15 +1,10 @@
 import { Metadata } from 'next';
 import React from 'react';
-import { ArticleList } from './components';
 
 export const metadata: Metadata = {
-  title: "Elton's blog",
+  title: "Elton's personal website",
 };
 
 export default function Page() {
-  return (
-    <div>
-      <ArticleList />
-    </div>
-  );
+  return <div>Home</div>;
 }
