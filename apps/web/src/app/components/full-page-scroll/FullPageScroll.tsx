@@ -2,6 +2,7 @@
 
 import React, { ReactNode, useState } from 'react';
 import { Section } from './Section';
+import { Indicators } from './Indicators';
 
 type SectionData = {
   id: string;
@@ -18,20 +19,13 @@ export function FullPageScroll({ sections }: FullPageScrollProps) {
 
   return (
     <div className="w-full h-full overflow-y-scroll snap-mandatory snap-y scroll-smooth">
-      <div className="fixed top-1/2 right-[100px] translate-[-50%] mx-auto flex flex-col gap-[30px]">
-        {sections.map(({ id, title }) => (
-          <a
-            key={id}
-            className={
-              'relative p-[10px]' + active === id
-                ? 'after:bg-primary after:translate-[-50%] after:scale-150'
-                : ''
-            }
-            href={`#${id}`}
-            data-title={title}
-          />
-        ))}
-      </div>
+      <Indicators
+        sections={sections.map((s) => ({
+          id: s.id,
+          name: s.title,
+          active: active === s.id,
+        }))}
+      />
       {sections.map(({ id, content }) => {
         return (
           <Section key={id} id={id} onVisible={() => setActive(id)}>
