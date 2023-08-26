@@ -13,15 +13,11 @@ export function Introduction() {
         <p className="text-2xl animate-fade-up">
           Full Stack Software Developer with
         </p>
-        {/* <h3
-            extraClasses={[
-              styles.delayFirst,
-              styles.slideInUp,
-              styles.workingExperience,
-            ]}
-          > */}
         <p className="text-2xl opacity-0 animate-fade-up animate-delay-1000">
-          <span className="text-accent">+ years</span> of working experience
+          <span className="text-accent before:content-[counter(count)] before:animate-[counter_1s_linear_forwards] before:animate-delay-1000">
+            + years
+          </span>{' '}
+          of working experience
         </p>
       </span>
       <br />
