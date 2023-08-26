@@ -2,7 +2,7 @@ import React from 'react';
 
 export function Introduction() {
   return (
-    <div className="w-full h-full flex flex-col items-start justify-center gap-1">
+    <div className="h-full max-w-screen-md mx-auto flex flex-col items-start justify-center gap-1">
       <p className="m-0">{"Hi, I'm"}</p>
       <span>
         <p className="text-4xl text-primary font-bold overflow-hidden whitespace-nowrap font-mono animate-[typing_1.5s_steps(18,end),blink-caret_1s_step-end_infinite]">
