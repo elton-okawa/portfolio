@@ -47,7 +47,7 @@ export function Section({
   return (
     <section
       id={id}
-      className={`snap-center w-full h-full ${className}`}
+      className={`snap-center w-full min-h-screen ${className}`}
       ref={sectionRef}
     >
       {children}

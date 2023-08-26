@@ -28,12 +28,7 @@ export function FullPageScroll({ sections }: FullPageScrollProps) {
       />
       {sections.map(({ id, content }) => {
         return (
-          <Section
-            key={id}
-            id={id}
-            onVisible={() => setActive(id)}
-            className="h-screen"
-          >
+          <Section key={id} id={id} onVisible={() => setActive(id)}>
             {content}
           </Section>
         );
