@@ -10,8 +10,9 @@ export function Introduction() {
         </p>
       </span>
       <span>
-        {/* <h3 className={[styles.slideInUp]}> */}
-        <h3>Full Stack Software Developer with</h3>
+        <p className="text-2xl animate-fade-up">
+          Full Stack Software Developer with
+        </p>
         {/* <h3
             extraClasses={[
               styles.delayFirst,
@@ -19,13 +20,12 @@ export function Introduction() {
               styles.workingExperience,
             ]}
           > */}
-        <h3>
+        <p className="text-2xl opacity-0 animate-fade-up animate-delay-1000">
           <span className="text-accent">+ years</span> of working experience
-        </h3>
+        </p>
       </span>
       <br />
-      {/* <p extraClasses={[styles.summary]}> */}
-      <p>
+      <p className="opacity-0 animate-fade animate-delay-2000">
         My values:{' '}
         <span className="text-secondary">
           lifelong learning, empathy, continuous feedback and work-life balance.
