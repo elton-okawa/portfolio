@@ -6,7 +6,7 @@
   html,
   body {
     @apply h-full m-0;
-    scrollbar-gutter: stable both-edges;
+    scrollbar-gutter: stable;
   }
 
   h1 {
