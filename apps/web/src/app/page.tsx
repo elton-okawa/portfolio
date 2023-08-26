@@ -21,14 +21,9 @@ export default function Page() {
           content: <AboutMe />,
         },
         // {
-        //   id: 'experience',
-        //   title: 'Experience',
-        //   content: <Experience experience={experience} />,
-        // },
-        // {
-        //   id: 'portifolio',
-        //   title: 'Portifolio',
-        //   content: <UnderConstruction title="Portifolio" />,
+        //   id: 'projects',
+        //   title: 'Projects',
+        //   content: <Projects />,
         // },
         // {
         //   id: 'contact',
