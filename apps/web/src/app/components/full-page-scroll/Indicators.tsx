@@ -11,7 +11,7 @@ export function Indicators({ sections }: IndicatorProps) {
         <a
           key={id}
           className={`transition ease-linear w-[12px] h-[12px] rounded-[50%] ${
-            active ? 'bg-primary scale-150' : 'bg-gray-400'
+            active ? 'bg-primary scale-125' : 'bg-gray-400'
           }`}
           href={`#${id}`}
           data-title={name}

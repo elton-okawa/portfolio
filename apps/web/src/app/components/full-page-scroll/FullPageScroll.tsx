@@ -18,7 +18,7 @@ export function FullPageScroll({ sections }: FullPageScrollProps) {
   const [active, setActive] = useState(sections[0].id);
 
   return (
-    <div className="w-full h-full overflow-y-scroll snap-mandatory snap-y scroll-smooth">
+    <>
       <Indicators
         sections={sections.map((s) => ({
           id: s.id,
@@ -28,11 +28,16 @@ export function FullPageScroll({ sections }: FullPageScrollProps) {
       />
       {sections.map(({ id, content }) => {
         return (
-          <Section key={id} id={id} onVisible={() => setActive(id)}>
+          <Section
+            key={id}
+            id={id}
+            onVisible={() => setActive(id)}
+            className="h-screen"
+          >
             {content}
           </Section>
         );
       })}
-    </div>
+    </>
   );
 }
