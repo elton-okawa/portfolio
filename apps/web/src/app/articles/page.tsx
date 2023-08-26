@@ -3,7 +3,7 @@ import { ArticleList } from './components';
 
 export default function Page() {
   return (
-    <div>
+    <div className="max-w-screen-sm mx-auto mt-16">
       <ArticleList />
     </div>
   );

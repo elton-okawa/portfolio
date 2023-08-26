@@ -32,13 +32,13 @@ export default async function Layout({ children }: React.PropsWithChildren) {
   };
 
   return (
-    <>
+    <div className="max-w-screen-sm mx-auto mt-16 px-5 ">
       <div className="my-2">
         <h1>{post.title}</h1>
         <p className="text-description">{toShortDate(post.updatedAt)}</p>
         <p className="text-description">{post.description}</p>
       </div>
       <div className="bg-default px-5 py-2">{children}</div>
-    </>
+    </div>
   );
 }

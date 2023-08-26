@@ -1,11 +1,13 @@
 const colors = require('tailwindcss/colors');
 const { createThemes } = require('tw-colors');
+const animation = require('tailwindcss-animated');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   darkMode: 'class',
   plugins: [
+    animation,
     createThemes(
       {
         light: {
@@ -36,9 +38,29 @@ module.exports = {
           to: { borderColor: theme('colors.secondary') },
           '50%': { borderColor: 'transparent' },
         },
+        counter: {
+          '0%': {
+            'counter-increment': 'count 0',
+          },
+          '25%': {
+            'counter-increment': 'count 1',
+          },
+          '50%': {
+            'counter-increment': 'count 2',
+          },
+          '75%': {
+            'counter-increment': 'count 3',
+          },
+          '100%': {
+            'counter-increment': 'count 4',
+          },
+        },
       }),
       animation: {
         typing: 'typing 1.5s steps(11, end), blink-caret 1s step-end 5',
+      },
+      animationDelay: {
+        2000: '2s',
       },
     },
   },
