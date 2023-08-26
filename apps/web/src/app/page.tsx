@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import React from 'react';
-import { FullPageScroll, Introduction } from './components';
+import { AboutMe, FullPageScroll, Introduction } from './components';
 
 export const metadata: Metadata = {
   title: "Elton's personal website",
@@ -16,9 +16,9 @@ export default function Page() {
           content: <Introduction />,
         },
         {
-          id: 'introduction2',
-          title: 'Introduction2',
-          content: <Introduction />,
+          id: 'about-me',
+          title: 'About Me',
+          content: <AboutMe />,
         },
         // {
         //   id: 'experience',
