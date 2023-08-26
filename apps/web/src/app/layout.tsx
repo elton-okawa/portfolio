@@ -24,7 +24,7 @@ export default function RootLayout({
       <body className="flex flex-col gap-5 bg-gray-50 dark:bg-gray-700">
         <Providers>
           <NavBar />
-          <main className="flex justify-start flex-col flex-1 max-w-screen-sm mx-auto mt-16 px-5 gap-2">
+          <main className="flex justify-start flex-col flex-1 mt-16 gap-2">
             {children}
           </main>
           <Footer />
