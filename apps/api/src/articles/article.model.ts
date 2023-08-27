@@ -1,5 +1,5 @@
 import { Entity } from '@/shared/entity';
 
-export class Post extends Entity {
+export class Article extends Entity {
   title: string;
 }

@@ -1,19 +1,19 @@
 import { DatabaseModule, DATABASE_KEY } from '@/database';
 import { Module } from '@nestjs/common';
 import { Db } from 'mongodb';
-import { PostsService } from './posts.service';
+import { ArticlesService } from './articles.service';
 import { DataloaderModule } from '@/graphql-dataloader';
 
 @Module({
   imports: [DatabaseModule, DataloaderModule],
   providers: [
     {
-      provide: 'POST_MODEL',
-      useFactory: (db: Db) => db.collection('posts'),
+      provide: 'ARTICLE_MODEL',
+      useFactory: (db: Db) => db.collection('articles'),
       inject: [DATABASE_KEY],
     },
-    PostsService,
+    ArticlesService,
   ],
-  exports: [PostsService],
+  exports: [ArticlesService],
 })
-export class PostsModule {}
+export class ArticlesModule {}
