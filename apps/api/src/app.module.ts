@@ -5,12 +5,10 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { YogaDriver, YogaDriverConfig } from '@graphql-yoga/nestjs';
-import { join } from 'path';
 import { HelloModule } from './hello/hello.module';
 import { DatabaseModule } from './database/database.module';
-import { PostsResolver } from './posts';
+import { ArticlesResolver, ArticlesModule } from './articles';
 import { DataloaderModule, DataloaderService } from './graphql-dataloader';
-import { PostsModule } from './posts/posts.module';
 
 @Module({
   imports: [
@@ -29,9 +27,9 @@ import { PostsModule } from './posts/posts.module';
     }),
     HelloModule,
     DatabaseModule,
-    PostsModule,
+    ArticlesModule,
   ],
   controllers: [AppController],
-  providers: [AppService, PostsResolver],
+  providers: [AppService, ArticlesResolver],
 })
 export class AppModule {}
