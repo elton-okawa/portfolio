@@ -12,7 +12,7 @@ type ProjectSummaryProps = {
 
 export function ProjectSummary(props: ProjectSummaryProps) {
   return (
-    <div className="w-80 hover:text-secondary hover:shadow-md">
+    <div className="w-72 hover:text-secondary hover:shadow-md">
       <Link href={`projects/${props.slug}`}>
         <div className="relative w-full h-48 mb-2">
           <Image

@@ -25,7 +25,6 @@ export async function ArticleList() {
 
   return (
     <>
-      <h3 className="text-lg text-accent font-bold mt-5">Recently Published</h3>
       {data.articles.map((article) => (
         <ArticleSummary key={article.slug} {...article} />
       ))}

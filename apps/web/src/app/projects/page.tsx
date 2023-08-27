@@ -1,10 +1,11 @@
 import React from 'react';
 
-import { ProjectList } from '@/components';
+import { AccentTitle, ProjectList } from '@/components';
 
 export default function Page() {
   return (
-    <div className="max-w-screen-md mt-16 mx-auto">
+    <div className="max-w-screen-sm mt-16 mx-auto">
+      <AccentTitle>Latest Projects</AccentTitle>
       <ProjectList />
     </div>
   );
