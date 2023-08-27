@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import '../styles/globals.css';
 
-import { Providers, NavBar, Footer } from './components';
+import { Providers, NavBar, Footer, EasterEgg } from './components';
 
 export const metadata: Metadata = {
   title: 'Home',
@@ -29,6 +29,7 @@ export default function RootLayout({
           </main>
           <Footer />
         </Providers>
+        <EasterEgg />
       </body>
     </html>
   );
