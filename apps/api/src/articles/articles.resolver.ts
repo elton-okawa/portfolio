@@ -8,8 +8,8 @@ export class ArticlesResolver {
   constructor(private articlesService: ArticlesService) {}
 
   @Query(() => ArticleType)
-  async article(@Args('id') id: string, @Context() ctx: GraphQLContext) {
-    const article = ctx.dataloader.get(ArticleType).load(id);
+  async article(@Args('slug') slug: string, @Context() ctx: GraphQLContext) {
+    const article = ctx.dataloader.get(ArticleType).load(slug);
     if (!article) {
       throw new Error('article not found');
     }
