@@ -10,10 +10,19 @@ const projects = Array.from({ length: 3 }, () => ({
   tags: ['Node.js', 'React'],
 }));
 
-export function ProjectList() {
+type ProjectListProps = {
+  showcase?: boolean;
+};
+
+export function ProjectList({ showcase = false }: ProjectListProps) {
+  const firstIndex = showcase ? 1 : 0;
+
   return (
     <div className="flex flex-wrap gap-5 justify-around">
-      {projects.map((proj) => (
+      {showcase && projects.length > 0 && (
+        <ProjectSummary {...projects[0]} showcase={showcase} />
+      )}
+      {projects.slice(firstIndex).map((proj) => (
         <ProjectSummary key={proj.slug} {...proj} />
       ))}
     </div>

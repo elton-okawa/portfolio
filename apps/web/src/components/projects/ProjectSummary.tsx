@@ -8,11 +8,17 @@ type ProjectSummaryProps = {
   description: string;
   imagePath: string;
   tags: string[];
+  showcase?: boolean;
 };
 
-export function ProjectSummary(props: ProjectSummaryProps) {
+export function ProjectSummary({
+  showcase = false,
+  ...props
+}: ProjectSummaryProps) {
+  const width = showcase ? 'w-11/12' : 'w-72';
+
   return (
-    <div className="w-72 hover:text-secondary hover:shadow-md">
+    <div className={`${width} hover:text-secondary hover:shadow-md`}>
       <Link href={`projects/${props.slug}`}>
         <div className="relative w-full h-48 mb-2">
           <Image
