@@ -6,3 +6,4 @@ export * from './projects';
 export * from './AccentTitle';
 export * from './ExternalLink';
 export * from './Carousel';
+export * from './ImageWithCaption';
