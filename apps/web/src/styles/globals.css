@@ -9,6 +9,10 @@
     scrollbar-gutter: stable;
   }
 
+  ul {
+    @apply list-disc list-inside;
+  }
+
   h1 {
     @apply text-4xl mt-5 mb-1;
   }
