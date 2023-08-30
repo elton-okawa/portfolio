@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { ExternalLink, Carousel } from '@/components';
+import { ExternalLink, Carousel, ImageWithCaption } from '@/components';
 
 export default function Page() {
   return (
@@ -115,69 +115,60 @@ export default function Page() {
           automatically. Finally I added the logic and infrastructure for those
           two new alerts.
         </p>
+
+        <Carousel className="w-3/4 h-64">
+          <ImageWithCaption
+            src="/projects/stock-alert/parse-stock.jpg"
+            caption="Parse stock architecture"
+          />
+          <ImageWithCaption
+            src="/projects/stock-alert/alert-check.jpg"
+            caption="Alert check architecture"
+          />
+          <ImageWithCaption
+            src="/projects/stock-alert/send-email.jpg"
+            caption="Send email architecture"
+          />
+        </Carousel>
+
+        <p>
+          {`At that time, I didn't find a way to synchronize on fan-in parts such as starting checking alerts after ALL stock price fetch has been done. My initial solution was executing each part after a specific amount of time, as it worked, I kept it and didn't revisit it`}
+        </p>
       </div>
 
       <h2>Current Status and Future</h2>
-      <p>The following images contain more architecture details:</p>
+      <div className="flex gap-4">
+        <div>
+          <p>
+            {
+              "It's been running since 2021, I received more than 600 alert emails and I didn't have any hosting cost."
+            }
+          </p>
+          <p>
+            Looking at the current design today, I would solve the fan-in
+            problem by making the function that starts the fan-out write to the
+            database the number of tasks that needs to be executed and each task
+            executer function would decrement it atomically until the last one
+            writes in a topic to start the next part.
+          </p>
 
-      <Carousel className="w-3/4 h-64">
-        <Image
-          alt="example of an alert email"
-          src="/projects/stock-alert/parse-stock.jpg"
-          fill
-          className="object-contain"
-        />
-        <Image
-          alt="example of an alert email"
-          src="/projects/stock-alert/alert-check.jpg"
-          fill
-          className="object-contain"
-        />
-        <Image
-          alt="example of an alert email"
-          src="/projects/stock-alert/send-email.jpg"
-          fill
-          className="object-contain"
-        />
-        <Image
-          alt="example of an alert email"
-          src="/projects/stock-alert/emails-1.jpg"
-          fill
-          className="object-contain"
-        />
-        <Image
-          alt="example of an alert email"
-          src="/projects/stock-alert/emails-2.jpg"
-          fill
-          className="object-contain"
-        />
-      </Carousel>
-
-      <p>
-        {
-          "It's been running since 2021, I received more than 600 alert emails and I didn't have to pay any hosting cost."
-        }
-      </p>
-      <p>
-        TODO emails image with subtitle - some I even did not open, sorry past
-        me who did all this work
-      </p>
-
-      <p>
-        {`At that time, I didn't find a way to synchronize on fan-in parts such as starting checking alerts after ALL stock price fetch has been done. My initial solution was executing each part after a specific amount of time, as it worked, I kept it and didn't revisit it`}
-      </p>
-      <p>
-        Looking at it today, I would solve this fan-in problem by making the
-        function that starts the fan-out write to the database the number of
-        tasks that needs to be executed and each task executer function would
-        decrement it atomically until the last one writes in a topic to start
-        the next part.
-      </p>
-
-      <p>
-        In the future I might implement this solution and create an React UI to
-        manage the alert config - today I input it directly on the database.
-      </p>
+          <p>
+            In the future I might implement this solution and create an React UI
+            to manage the alert config - today I input it directly on the
+            database.
+          </p>
+        </div>
+        <Carousel className="w-80 h-80">
+          <ImageWithCaption
+            src="/projects/stock-alert/emails-1.jpg"
+            caption="Emails received in 2023. I didn't open all of them, sorry me from the past 😅"
+          />
+          <ImageWithCaption
+            src="/projects/stock-alert/emails-2.jpg"
+            caption="Initial emails received in 2021"
+          />
+        </Carousel>
+      </div>
 
       <div className="max-w-2xl">
         <h1>Lessons Learned</h1>
@@ -191,7 +182,7 @@ export default function Page() {
         </p>
         <p>
           Honorable mention goes to the applied Event Driven Architecture that
-          allows me to easily create a new alert function
+          allows me to easily create a new alert function.
         </p>
       </div>
     </div>
