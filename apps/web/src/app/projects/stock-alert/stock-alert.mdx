@@ -1,0 +1,117 @@
+<h1>Stock Alert</h1>
+<p>
+  Stock Alert is a personal project that send me an email every weekday if the
+  closing price of the previous day reaches a pre configured threshold such as
+  fixed price or 10% change comparing with 7 days ago
+</p>
+<p>Node.js, Typescript, Jest, Google Cloud Platform</p>
+<Image
+  alt="example of an alert email"
+  src="/projects/stock-alert/email.jpg"
+  width={300}
+  height={300}
+/>
+
+      <h1>Purpose and Goal</h1>
+      <p>
+        {
+          "As an investor I've been applying the Swing Trading approach, buy when it's cheap and sell when it's expensive. In the short and medium-term the market is volatile so ideally I should look at the stock prices at least once a week to not miss any opportunity"
+        }
+      </p>
+      <p>
+        This repetitive task become a burden for me as the number of stocks
+        increased, so I had the idea to automate this task and also learn
+        something new.
+      </p>
+      <p>
+        The requirements were: it must be free to keep it running, It must be
+        flexible to add more alerts and I need to learn something from that
+      </p>
+
+      <h1>Tech Stack</h1>
+      <p>
+        Cloud providers offers a generous amount of free tier products, usually
+        for serverless ones. So the main logic would be performed by [Cloud
+        Functions](TODO) running Node.js and Typescript
+      </p>
+      <p>
+        In order to be make sure that the item would be processed and to be easy
+        to add new type of alerts, I choose an Event Driven Approach using
+        [PubSub](TODO) as the message broker
+      </p>
+      <p>
+        The Stock API free tier has an rate limit such as at most 5 requests per
+        second, [Cloud Tasks](TODO) allows me to choose how much tasks will be
+        performed per second
+      </p>
+      <p>
+        Finally, in order to run it every weekday, I need a [Cloud
+        Scheduler](TODO) to trigger my system
+      </p>
+
+      <h1>Design and Development</h1>
+      <p>
+        I wanted to start delivering value as soon as possible, so first I did
+        the logic to access the API and logging on the console if the value was
+        higher than the threshold. It worked but it requires the entire
+        environment setup to run it.
+      </p>
+      <p>
+        Then I added the Database, the stock price would be saved and the alert
+        config would be pre configured still running manually
+      </p>
+      <p>
+        I setup the infrastructure, so every day I received an email. But every
+        change I needed to deploy manually
+      </p>
+      <p>
+        I setup the CI/CD pipeline on GitHub Actions, so every change would be
+        deployed automatically
+      </p>
+      <p>Finally I added two more alerts, a percentage and a missing data</p>
+
+      <h1>Current Status and Future</h1>
+      <p>The images explain with more details the architecture</p>
+      <Image
+        alt="example of an alert email"
+        src="/projects/stock-alert/alert-check.jpg"
+        width={300}
+        height={300}
+      />
+
+      <p>
+        {
+          "It's been running since 2021, I received more than 600 alert emails and didn't pay a penny to this"
+        }
+      </p>
+      <p>
+        TODO emails image with subtitle - some I even did not open, sorry past
+        me who did all this work
+      </p>
+
+      <p>
+        {
+          "At that time, I didn't find a way to deal with the fan-in and synchronize each service part because each alert would run its respective amount of cloud functions and then I wanted to send a email summarizing them, my initial solution ~~that keeps living~~ was executing each part after a specific amount of time. It worked so I left this way and didn't come back :)"
+        }
+      </p>
+      <p>
+        In the future I might want to solve this synchronization problem, create
+        an React UI to manage the alerts - today I simple input it directly on
+        the database and maybe even a real time alert
+      </p>
+
+      <h1>Lessons Learned</h1>
+      <p>
+        The main takeaway from this experience is delivering value early and
+        iterate through it by running manually on my computer, moving it to the
+        cloud, automating the deploy and them adding more features. One big
+        mistake I did in previous personal projects was spending months to
+        create the super generic code and them losing motivation and moving on
+        to do another thing. Here I stopped working but work I did provides me
+        value, in the future I might want to do another iteration on it
+      </p>
+
+      <p>
+        started simple, manual deploy, single alert, flexibility of the event
+        driven architecture add more features
+      </p>
