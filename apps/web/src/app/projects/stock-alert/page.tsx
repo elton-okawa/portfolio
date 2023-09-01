@@ -17,11 +17,9 @@ export default function Page() {
           <p>Node.js, Typescript, Jest, Google Cloud Platform</p>
         </div>
         <div className="relative flex-1 h-96">
-          <Image
-            alt="example of an alert email"
+          <ImageWithCaption
             src="/projects/stock-alert/email.jpg"
-            fill
-            className="object-contain"
+            caption="Example email with alerts"
           />
         </div>
       </div>
