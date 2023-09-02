@@ -15,7 +15,7 @@ export function ProjectSummary({
   showcase = false,
   ...props
 }: ProjectSummaryProps) {
-  const width = showcase ? 'w-11/12' : 'w-72';
+  const width = showcase ? 'w-11/12' : 'w-80';
   const height = showcase ? 'h-72' : 'h-48';
 
   return (
