@@ -10,7 +10,7 @@ export default function Page() {
           <p>
             Stock Alert is a personal project that sends me an email every
             weekday if the closing price reaches a pre-configured threshold such
-            as fixed price or more than 6% change comparing with 30 days ago.
+            as fixed price or percentage change.
           </p>
           <p className="font-semibold mb-0">Stack</p>
           <p>Node.js, Typescript, Jest, Google Cloud Platform</p>
@@ -33,13 +33,12 @@ export default function Page() {
         <p>
           This repetitive task became a burden for me as the number of stocks
           increased, so I had the idea to automate it while learning something
-          new.
+          new, leading me to the following requirements:
         </p>
-        <p>The requirements were:</p>
         <ul>
           <li>it must be free to keep it running;</li>
           <li>it must be flexible to add more alerts;</li>
-          <li>I need to learn something from that;</li>
+          <li>I need to learn new concepts;</li>
         </ul>
       </div>
 
@@ -102,7 +101,7 @@ export default function Page() {
       <p>
         I left this first version running for a while, it was already fulfilling
         my needs. Some months later I had the idea to have two more alerts, one
-        for missing data and another for percentage changes.
+        for missing data and another one for percentage changes.
       </p>
       <p>
         Before making any changes and seeing how this project could grow, I
@@ -111,6 +110,7 @@ export default function Page() {
         automatically. Finally I added the logic and infrastructure for those
         two new alerts.
       </p>
+      <p>The following images show the current architecture:</p>
 
       <Carousel className="w-3/4 h-96">
         <ImageWithCaption
@@ -128,7 +128,7 @@ export default function Page() {
       </Carousel>
 
       <p>
-        {`At that time, I didn't find a way to synchronize on fan-in parts such as starting checking alerts after ALL stock price fetch has been done. My initial solution was executing each part after a specific amount of time, as it worked, I kept it and didn't revisit it`}
+        {`At that time, I didn't find a way to synchronize on fan-in parts such as starting checking alerts after ALL stock price fetch has been done. My initial solution was executing each part after a specific amount of time, as it worked, I kept it and didn't revisit it.`}
       </p>
 
       <h2>Current Status and Future</h2>
@@ -170,14 +170,16 @@ export default function Page() {
         <p>
           The main takeaway from this experience is delivering value early and
           iterate through it by running manually on my computer, moving it to
-          the cloud, automating the deploy and them adding more features. One
-          big mistake I did in previous personal projects was spending months to
-          create the super generic code, losing motivation and moving on to do
-          another thing without having anything usable.
+          the cloud, automating the deploy and then adding more features.
+        </p>
+        <p>
+          One big mistake I did in previous personal projects was spending
+          months to create the super generic code, losing motivation and moving
+          on to do another thing without having anything usable.
         </p>
         <p>
           Honorable mention goes to the applied Event Driven Architecture that
-          allows me to easily create a new alert function.
+          allowed me to easily create a new alert function.
         </p>
       </div>
     </div>
