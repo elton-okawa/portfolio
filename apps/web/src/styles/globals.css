@@ -3,9 +3,14 @@
 @tailwind utilities;
 
 @layer base {
-  html,
+  html {
+    @apply h-full m-0;
+    overflow: hidden;
+  }
+
   body {
     @apply h-full m-0;
+    overflow: auto;
     scrollbar-gutter: stable;
   }
 

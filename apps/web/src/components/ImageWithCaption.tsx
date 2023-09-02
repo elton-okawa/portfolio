@@ -41,8 +41,14 @@ export function ImageWithCaption({
           aria-hidden="true"
         />
 
-        <Dialog.Panel className="fixed inset-0 flex flex-col items-center justify-center max-w-screen-sm h-3/4 m-auto">
-          <Image alt={caption} src={src} fill className="object-contain" />
+        <Dialog.Panel className="fixed inset-0 flex flex-col items-center justify-center max-w-screen-md h-3/4 m-auto">
+          <Image
+            alt={caption}
+            src={src}
+            fill
+            className="object-contain"
+            quality={100}
+          />
         </Dialog.Panel>
       </Dialog>
     </>
