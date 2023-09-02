@@ -19,13 +19,13 @@
   }
 
   h1 {
-    @apply text-4xl mt-5 mb-1;
+    @apply text-3xl font-bold mt-5 mb-1;
   }
   h2 {
-    @apply text-3xl mt-5 mb-1;
+    @apply text-2xl font-bold mt-5 mb-1;
   }
   h3 {
-    @apply text-2xl mt-5 mb-1;
+    @apply text-xl font-bold mt-5 mb-1;
   }
   h4 {
     @apply text-xl mt-5 mb-1;

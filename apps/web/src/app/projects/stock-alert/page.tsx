@@ -1,10 +1,9 @@
 import React from 'react';
-import Image from 'next/image';
 import { ExternalLink, Carousel, ImageWithCaption } from '@/components';
 
 export default function Page() {
   return (
-    <div className="max-w-screen-lg mt-16 mx-auto flex flex-col">
+    <div className=" flex flex-col max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg mt-16 mx-auto">
       <h1>Stock Alert</h1>
       <div className="flex flex-row gap-4">
         <div className="flex-1">
@@ -13,7 +12,7 @@ export default function Page() {
             weekday if the closing price reaches a pre-configured threshold such
             as fixed price or more than 6% change comparing with 30 days ago.
           </p>
-          <p className="font-semibold">Stack</p>
+          <p className="font-semibold mb-0">Stack</p>
           <p>Node.js, Typescript, Jest, Google Cloud Platform</p>
         </div>
         <div className="relative flex-1 h-96">
@@ -84,55 +83,53 @@ export default function Page() {
           to trigger the system.
         </p>
       </div>
-      <div className="max-w-2xl">
-        <h2>Development</h2>
-        <p>
-          I wanted to start delivering value as soon as possible, so first I did
-          the logic to access the API and logging on the console if the value
-          was higher than a threshold. It worked but it required the entire
-          environment setup to run it.
-        </p>
-        <p>
-          Then I added the database, the stock price was saved and the alert
-          config was pre configured, but I still had to run it manually.
-        </p>
-        <p>
-          After setting up the infrastructure, I started receiving an email
-          alert every day, but after each change I needed to deploy via command
-          line.
-        </p>
-        <p>
-          I left this first version running for a while, it was already
-          fulfilling my needs. Some months later I had the idea to have two more
-          alerts, one for missing data and another for percentage changes.
-        </p>
-        <p>
-          Before making any changes and seeing how this project could grow, I
-          decided to add automated tests - ideally I should have added since the
-          beginning - and a CI/CD on GitHub Actions to deploy every change
-          automatically. Finally I added the logic and infrastructure for those
-          two new alerts.
-        </p>
 
-        <Carousel className="w-3/4 h-64">
-          <ImageWithCaption
-            src="/projects/stock-alert/parse-stock.jpg"
-            caption="Parse stock architecture"
-          />
-          <ImageWithCaption
-            src="/projects/stock-alert/alert-check.jpg"
-            caption="Alert check architecture"
-          />
-          <ImageWithCaption
-            src="/projects/stock-alert/send-email.jpg"
-            caption="Send email architecture"
-          />
-        </Carousel>
+      <h2>Development</h2>
+      <p>
+        I wanted to start delivering value as soon as possible, so first I did
+        the logic to access the API and logging on the console if the value was
+        higher than a threshold. It worked but it required the entire
+        environment setup to run it.
+      </p>
+      <p>
+        Then I added the database, the stock price was saved and the alert
+        config was pre configured, but I still had to run it manually.
+      </p>
+      <p>
+        After setting up the infrastructure, I started receiving an email alert
+        every day, but after each change I needed to deploy via command line.
+      </p>
+      <p>
+        I left this first version running for a while, it was already fulfilling
+        my needs. Some months later I had the idea to have two more alerts, one
+        for missing data and another for percentage changes.
+      </p>
+      <p>
+        Before making any changes and seeing how this project could grow, I
+        decided to add automated tests - ideally I should have added since the
+        beginning - and a CI/CD on GitHub Actions to deploy every change
+        automatically. Finally I added the logic and infrastructure for those
+        two new alerts.
+      </p>
 
-        <p>
-          {`At that time, I didn't find a way to synchronize on fan-in parts such as starting checking alerts after ALL stock price fetch has been done. My initial solution was executing each part after a specific amount of time, as it worked, I kept it and didn't revisit it`}
-        </p>
-      </div>
+      <Carousel className="w-3/4 h-96">
+        <ImageWithCaption
+          src="/projects/stock-alert/parse-stock.jpg"
+          caption="Parse stock architecture"
+        />
+        <ImageWithCaption
+          src="/projects/stock-alert/alert-check.jpg"
+          caption="Alert check architecture"
+        />
+        <ImageWithCaption
+          src="/projects/stock-alert/send-email.jpg"
+          caption="Send email architecture"
+        />
+      </Carousel>
+
+      <p>
+        {`At that time, I didn't find a way to synchronize on fan-in parts such as starting checking alerts after ALL stock price fetch has been done. My initial solution was executing each part after a specific amount of time, as it worked, I kept it and didn't revisit it`}
+      </p>
 
       <h2>Current Status and Future</h2>
       <div className="flex gap-4">
@@ -169,7 +166,7 @@ export default function Page() {
       </div>
 
       <div className="max-w-2xl">
-        <h1>Lessons Learned</h1>
+        <h2>Lessons Learned</h2>
         <p>
           The main takeaway from this experience is delivering value early and
           iterate through it by running manually on my computer, moving it to
