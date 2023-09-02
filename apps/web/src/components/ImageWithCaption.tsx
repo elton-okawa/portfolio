@@ -31,10 +31,17 @@ export function ImageWithCaption({
         </div>
         <p className="text-description text-center">{caption}</p>
       </div>
-      <Dialog open={isOpen} onClose={() => setIsOpen(false)}>
-        <div className="fixed inset-0 backdrop-blur-sm" aria-hidden="true" />
+      <Dialog
+        open={isOpen}
+        onClose={() => setIsOpen(false)}
+        className="relative z-50"
+      >
+        <div
+          className="fixed inset-0 backdrop-blur-sm bg-gray-500/50"
+          aria-hidden="true"
+        />
 
-        <Dialog.Panel className="fixed inset-0 flex flex-col items-center justify-center max-w-screen-lg h-3/4 m-auto p-4">
+        <Dialog.Panel className="fixed inset-0 flex flex-col items-center justify-center max-w-screen-sm h-3/4 m-auto">
           <Image alt={caption} src={src} fill className="object-contain" />
         </Dialog.Panel>
       </Dialog>
