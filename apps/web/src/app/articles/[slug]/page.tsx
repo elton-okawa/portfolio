@@ -1,3 +1,4 @@
+import { SRC_PATH } from '@/lib/constants';
 import { readdir } from 'fs/promises';
 import { join } from 'path';
 import React from 'react';
@@ -15,7 +16,7 @@ export default async function Page({ params }: ArticlePageProps) {
   return <Component />;
 }
 
-const root = join(process.cwd(), 'src', 'app', 'articles', '[slug]');
+const root = join(SRC_PATH, 'app', 'articles', '[slug]');
 export const dynamicParams = false;
 export async function generateStaticParams() {
   const dir = await readdir(root);

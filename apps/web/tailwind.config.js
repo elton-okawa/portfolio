@@ -1,6 +1,7 @@
 const colors = require('tailwindcss/colors');
 const { createThemes } = require('tw-colors');
 const animation = require('tailwindcss-animated');
+const { scrollbarGutter } = require('tailwind-scrollbar-utilities');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -23,6 +24,7 @@ module.exports = {
       },
       { getThemeClassName: (themeName) => themeName }
     ),
+    scrollbarGutter(),
   ],
   theme: {
     extend: {

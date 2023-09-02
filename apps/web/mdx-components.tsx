@@ -1,4 +1,3 @@
-import React from 'react';
 import type { MDXComponents } from 'mdx/types';
 import { SectionAnchor, EmphasisQuote } from '@/components';
 

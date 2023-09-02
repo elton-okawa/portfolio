@@ -1,0 +1,9 @@
+[
+  {
+    "title": "Stock Alert",
+    "description": "Stock Alert is a personal project that sends me an email every weekday if the closing price reaches a pre-configured threshold such as fixed price or percentage change.",
+    "slug": "stock-alert",
+    "imagePath": "/projects/stock-alert/alert-check.jpg",
+    "tags": ["Node.js", "React"]
+  }
+]
