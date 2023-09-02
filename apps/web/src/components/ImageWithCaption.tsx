@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { Dialog } from '@headlessui/react';
+import { Dialog, Transition } from '@headlessui/react';
 
 type ImageWithCaptionProps = {
   src: string;
@@ -31,26 +31,44 @@ export function ImageWithCaption({
         </div>
         <p className="text-description text-center">{caption}</p>
       </div>
-      <Dialog
-        open={isOpen}
-        onClose={() => setIsOpen(false)}
-        className="relative z-50"
-      >
-        <div
-          className="fixed inset-0 backdrop-blur-sm bg-gray-500/50"
-          aria-hidden="true"
-        />
+      <Transition show={isOpen} as={React.Fragment}>
+        <Dialog onClose={() => setIsOpen(false)} className="relative z-50">
+          <Transition.Child
+            as={React.Fragment}
+            enter="ease-out duration-300"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="ease-in duration-200"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <div
+              className="fixed inset-0 backdrop-blur-sm bg-gray-500/50"
+              aria-hidden="true"
+            />
+          </Transition.Child>
 
-        <Dialog.Panel className="fixed inset-0 flex flex-col items-center justify-center max-w-screen-md h-3/4 m-auto">
-          <Image
-            alt={caption}
-            src={src}
-            fill
-            className="object-contain"
-            quality={100}
-          />
-        </Dialog.Panel>
-      </Dialog>
+          <Transition.Child
+            as={React.Fragment}
+            enter="ease-out duration-300"
+            enterFrom="opacity-0 scale-95"
+            enterTo="opacity-100 scale-100"
+            leave="ease-in duration-200"
+            leaveFrom="opacity-100 scale-100"
+            leaveTo="opacity-0 scale-95"
+          >
+            <Dialog.Panel className="fixed inset-0 flex flex-col items-center justify-center max-w-screen-md h-3/4 m-auto">
+              <Image
+                alt={caption}
+                src={src}
+                fill
+                className="object-contain"
+                quality={100}
+              />
+            </Dialog.Panel>
+          </Transition.Child>
+        </Dialog>
+      </Transition>
     </>
   );
 }
