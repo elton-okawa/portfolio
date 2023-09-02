@@ -15,7 +15,7 @@ export default function Page() {
           <p className="font-semibold mb-0">Stack</p>
           <p>Node.js, Typescript, Jest, Google Cloud Platform</p>
         </div>
-        <div className="relative flex-1 h-96">
+        <div className="relative w-[320px] h-[400px]">
           <ImageWithCaption
             src="/projects/stock-alert/email.jpg"
             caption="Example email with alerts"
