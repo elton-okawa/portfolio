@@ -1,14 +1,6 @@
 import React from 'react';
 import { ProjectSummary } from './ProjectSummary';
-
-const projects = Array.from({ length: 3 }, () => ({
-  title: 'Placeholder Project',
-  description:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum scelerisque placerat urna, vitae luctus lectus. Suspendisse id eros at elit suscipit vulputate quis sed sapien',
-  slug: 'placeholder',
-  imagePath: '/placeholder.jpg',
-  tags: ['Node.js', 'React'],
-}));
+import projects from './projects.json';
 
 type ProjectListProps = {
   showcase?: boolean;

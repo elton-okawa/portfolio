@@ -16,19 +16,22 @@ export function ProjectSummary({
   ...props
 }: ProjectSummaryProps) {
   const width = showcase ? 'w-11/12' : 'w-72';
+  const height = showcase ? 'h-72' : 'h-48';
 
   return (
-    <div className={`${width} hover:text-secondary hover:shadow-md`}>
+    <div
+      className={`bg-default ${width} hover:text-secondary hover:shadow-md p-5`}
+    >
       <Link href={`projects/${props.slug}`}>
-        <div className="relative w-full h-48 mb-2">
+        <div className={`relative w-full ${height} mb-2`}>
           <Image
             src={props.imagePath}
             alt={props.slug}
             fill
-            className="object-cover"
+            className="object-contain"
           />
         </div>
-        <div className="px-5 py-2">
+        <div className="pt-2">
           <p className="font-bold text-inherit text-lg">{props.title}</p>
           <p className="text-description">{props.description}</p>
           <p className="text-default font-semibold">View project</p>
