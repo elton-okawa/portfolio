@@ -133,7 +133,7 @@ export default function Page() {
 
       <h2>Current Status and Future</h2>
       <div className="flex gap-4">
-        <div>
+        <div className="flex-1">
           <p>
             {
               "It's been running since 2021, I received more than 600 alert emails and I didn't have any hosting cost."
@@ -153,7 +153,7 @@ export default function Page() {
             database.
           </p>
         </div>
-        <Carousel className="w-80 h-80">
+        <Carousel className="w-[320px] h-[320px]">
           <ImageWithCaption
             src="/projects/stock-alert/emails-1.jpg"
             caption="Emails received in 2023. I didn't open all of them, sorry me from the past 😅"
