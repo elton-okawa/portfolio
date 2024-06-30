@@ -7,8 +7,8 @@ import { NavLink } from './NavLink';
 
 export function NavBar() {
   return (
-    <header className="flex flex-col justify-end fixed top-0 z-10 w-full h-[48px] bg-white dark:via-gray-800 shadow-md">
-      <div className="flex items-center justify-between container mx-auto">
+    <header className="flex flex-col justify-end fixed top-0 z-10 w-full h-[48px] bg-default shadow-md">
+      <div className="flex items-center justify-around container mx-auto">
         <div className="w-32 flex align-center">
           <Logo />
         </div>
