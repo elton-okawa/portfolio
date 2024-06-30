@@ -6,7 +6,7 @@ type IndicatorProps = {
 
 export function Indicators({ sections }: IndicatorProps) {
   return (
-    <div className="fixed top-1/2 right-[50px] flex flex-col gap-[30px]">
+    <div className="fixed top-[calc(50%-48px)] right-[50px] flex flex-col gap-[30px]">
       {sections.map(({ id, name, active }) => (
         <a
           key={id}
