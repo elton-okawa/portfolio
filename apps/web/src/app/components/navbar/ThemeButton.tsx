@@ -29,10 +29,7 @@ export function ThemeButton() {
   };
 
   return (
-    <button
-      onClick={toggleMode}
-      className="w-10 h-10 p-2.5 rounded-full bg-default"
-    >
+    <button onClick={toggleMode} className="w-10 h-10 p-2.5 rounded-full">
       {mounted ? <Icon /> : null}
     </button>
   );
