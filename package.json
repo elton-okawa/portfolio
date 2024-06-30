@@ -5,5 +5,8 @@
   "author": "Elton Okawa",
   "license": "MIT",
   "private": true,
-  "workspaces": ["packages/*"]
+  "workspaces": [
+    "packages/*"
+  ],
+  "packageManager": "pnpm@9.4.0"
 }
