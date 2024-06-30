@@ -7,12 +7,12 @@ import { NavLink } from './NavLink';
 
 export function NavBar() {
   return (
-    <header className="py-2 fixed top-0 z-10 w-full bg-gradient-to-r from-transparent via-indigo-100 dark:via-gray-800 shadow-sm">
-      <div className="flex items-center justify-between max-w-screen-md mx-auto">
+    <header className="flex flex-col justify-end fixed top-0 z-10 w-full h-[48px] bg-default shadow-md">
+      <div className="flex items-center justify-around container mx-auto">
         <div className="w-32 flex align-center">
           <Logo />
         </div>
-        <nav className="bg-default inline-flex px-5 bg-base-100 rounded-full shadow-[0_0_4px_1px_rgba(0,0,0,0.1)]">
+        <nav className="inline-flex px-5">
           <NavLink path="/" name="Home" />
           <NavLink path="/projects" name="Projects" />
           <NavLink path="/articles" name="Articles" />
