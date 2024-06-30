@@ -8,5 +8,8 @@
   "workspaces": [
     "packages/*"
   ],
-  "packageManager": "pnpm@9.4.0"
+  "engines": {
+    "pnpm": "^8"
+  },
+  "packageManager": "pnpm@8.15.7"
 }
