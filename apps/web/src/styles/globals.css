@@ -37,7 +37,7 @@
     @apply text-base mt-5 mb-1;
   }
   p {
-    @apply text-base mb-3;
+    @apply text-base mb-2;
   }
 }
 
