@@ -44,17 +44,20 @@ module.exports = {
           '0%': {
             'counter-increment': 'count 0',
           },
-          '25%': {
+          '20%': {
             'counter-increment': 'count 1',
           },
-          '50%': {
+          '40%': {
             'counter-increment': 'count 2',
           },
-          '75%': {
+          '60%': {
             'counter-increment': 'count 3',
           },
-          '100%': {
+          '80%': {
             'counter-increment': 'count 4',
+          },
+          '100%': {
+            'counter-increment': 'count 5',
           },
         },
       }),
