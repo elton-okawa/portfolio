@@ -1,15 +1,8 @@
 import React from 'react';
 import { ArticleSummary } from './ArticleSummary';
-
-type Article = {
-  slug: string;
-  title: string;
-  description: string;
-}
+import { articles } from '../../domain/article';
 
 export async function ArticleList() {
-  const articles: Article[] = [];
-
   return (
     <>
       {articles.map((article) => (

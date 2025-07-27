@@ -47,7 +47,7 @@ export function Section({
   return (
     <section
       id={id}
-      className={`snap-center w-full min-h-screen ${className}`}
+      className={`flex flex-col justify-center snap-center w-full min-h-[calc(100vh-48px)] pb-[48px] ${className}`}
       ref={sectionRef}
     >
       {children}
