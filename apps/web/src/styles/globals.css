@@ -12,6 +12,7 @@
     @apply h-full m-0;
     overflow: auto;
     scrollbar-gutter: stable;
+    scroll-behavior: smooth;
   }
 
   ul {
