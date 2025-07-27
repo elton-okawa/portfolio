@@ -25,7 +25,9 @@ export default function RootLayout({
         <Providers>
           <NavBar />
           <div className="h-[calc(100%-48px)] overflow-auto">
-            <main className="flex flex-col flex-1 gap-2">{children}</main>
+            <main className="flex flex-col flex-1 gap-2 min-h-full">
+              {children}
+            </main>
             <Footer />
           </div>
         </Providers>
