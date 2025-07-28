@@ -1,5 +1,12 @@
 [
   {
+    "title": "Investments Manager",
+    "description": "Investments Manager is a personal project that provides an UI to help me take decisions and configure Stock Alert",
+    "slug": "investments-manager",
+    "imagePath": "/projects/investments-manager/stock-list.png",
+    "tags": ["Node.js", "Angular"]
+  },
+  {
     "title": "Stock Alert",
     "description": "Stock Alert is a personal project that sends me an email every weekday if the closing price reaches a pre-configured threshold such as fixed price or percentage change.",
     "slug": "stock-alert",
