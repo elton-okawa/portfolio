@@ -1,5 +1,6 @@
 import React from 'react';
 import { ExternalLink, Carousel, ImageWithCaption } from '@/components';
+import { FooterSpacer } from '@/app/components';
 
 export default function Page() {
   return (
@@ -182,6 +183,7 @@ export default function Page() {
           allowed me to easily create a new alert function.
         </p>
       </div>
+      <FooterSpacer />
     </div>
   );
 }

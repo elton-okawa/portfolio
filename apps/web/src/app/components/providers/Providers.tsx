@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { ThemeProvider } from 'next-themes';
-import { ApolloProvider } from './ApolloProvider';
 
 type ProvidersProps = {
   children: React.ReactNode;
@@ -11,7 +10,7 @@ type ProvidersProps = {
 export function Providers({ children }: ProvidersProps) {
   return (
     <ThemeProvider attribute="class">
-      <ApolloProvider>{children}</ApolloProvider>
+      {children}
     </ThemeProvider>
   );
 }

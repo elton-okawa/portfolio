@@ -21,11 +21,15 @@ export default function RootLayout({
     // and not deeply into DOM tree
     // https://react.dev/reference/react-dom/hydrate#suppressing-unavoidable-hydration-mismatch-errors
     <html suppressHydrationWarning>
-      <body className="flex flex-col gap-5 bg-gray-50 dark:bg-gray-700 font-sans">
+      <body className="flex flex-col bg-gray-50 dark:bg-gray-700 font-sans">
         <Providers>
           <NavBar />
-          <main className="flex flex-col flex-1 gap-2">{children}</main>
-          <Footer />
+          <div className="h-[calc(100%-48px)] overflow-auto">
+            <main className="flex flex-col flex-1 gap-2 min-h-full">
+              {children}
+            </main>
+            <Footer />
+          </div>
         </Providers>
         <EasterEgg />
       </body>

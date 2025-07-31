@@ -13,7 +13,7 @@
     "typescript": "*"
   },
   "peerDependencies": {
-    "@elton-okawa/prettier-config": "*",
+    "@elton-okawa/prettier-config": "workspace:*",
     "typescript": "*"
   }
 }

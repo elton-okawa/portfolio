@@ -5,13 +5,12 @@
 @layer base {
   html {
     @apply h-full m-0;
-    overflow: hidden;
+    height: 100vh;
   }
 
   body {
     @apply h-full m-0;
-    overflow: auto;
-    scrollbar-gutter: stable;
+    height: 100%;
   }
 
   ul {

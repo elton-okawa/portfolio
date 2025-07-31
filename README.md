@@ -4,18 +4,6 @@
 
 ### Requirements
 
-Setup `api` environment files by copying `.env.base` as `.env`:
-
-```
-cd apps/api
-cp .env.base .env
-```
-
-You must update the following values:
-
-- `DB_NAME`
-- `DB_URL`
-
 Setup `app` environment files following the same idea:
 
 ```
